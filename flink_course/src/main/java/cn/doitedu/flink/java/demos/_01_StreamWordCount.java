@@ -23,13 +23,13 @@ public class _01_StreamWordCount {
 
         // 创建一个编程入口环境
         // ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();   // 批处理的入口环境
-        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();  // 流批一体的入口环境
+//        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();  // 流批一体的入口环境
 
 
         // 显式声明为本地运行环境，且带webUI
-        //Configuration configuration = new Configuration();
-        //configuration.setInteger("rest.port", 8081);
-        //StreamExecutionEnvironment env = StreamExecutionEnvironment.createLocalEnvironmentWithWebUI(configuration);
+        Configuration configuration = new Configuration();
+        configuration.setInteger("rest.port", 8081);
+        StreamExecutionEnvironment env = StreamExecutionEnvironment.createLocalEnvironmentWithWebUI(configuration);
 
 
         /**
@@ -40,7 +40,7 @@ public class _01_StreamWordCount {
 
         // 通过source算子，把socket数据源加载为一个dataStream（数据流）
         // [root@doit01 ~]# nc -lk 9999
-        SingleOutputStreamOperator<String> source = env.socketTextStream("localhost", 9999)
+        SingleOutputStreamOperator<String> source = env.socketTextStream("hadoop202", 9999)
                 .setParallelism(1)
                 .slotSharingGroup("g1");
 

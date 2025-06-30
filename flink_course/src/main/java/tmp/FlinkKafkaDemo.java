@@ -33,8 +33,7 @@ import org.apache.flink.streaming.api.windowing.assigners.TumblingEventTimeWindo
 import org.apache.flink.streaming.api.windowing.time.Time;
 import org.apache.flink.streaming.api.windowing.windows.GlobalWindow;
 import org.apache.flink.streaming.api.windowing.windows.TimeWindow;
-import org.apache.flink.table.runtime.operators.window.CountWindow;
-import org.apache.flink.table.runtime.operators.window.assigners.CountSlidingWindowAssigner;
+
 import org.apache.flink.util.Collector;
 import org.apache.flink.util.function.SerializableSupplier;
 import tmp.pojos.MysqlUser;
@@ -267,7 +266,7 @@ public class FlinkKafkaDemo {
         accumulator.setGame_user(value.getUSER_ID());
 
         // max(LOG_DATE) as LOG_DATE
-        if(value.getLOG_DATE().compareTo(accumulator.getLog_date())>0) accumulator.setLog_date(value.getLOG_DATE());
+        if (value.getLOG_DATE().compareTo(accumulator.getLog_date())>0) {accumulator.setLog_date(value.getLOG_DATE());}
 
         // sum(BET_MONEY) as total_bet_money
         accumulator.setTotal_bet_money(accumulator.getTotal_bet_money() + value.getBET_MONEY());
