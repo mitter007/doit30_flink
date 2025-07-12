@@ -50,7 +50,7 @@ public class Consumer02 {
 
         KafkaConsumer<String, String> kafkaConsumer = new KafkaConsumer<>(prop);
 
-        kafkaConsumer.subscribe(Arrays.asList("doit30-events1"));
+        kafkaConsumer.subscribe(Arrays.asList("doit30-events2"));
 //              定时过滤器
 
         Timer timer = new Timer();

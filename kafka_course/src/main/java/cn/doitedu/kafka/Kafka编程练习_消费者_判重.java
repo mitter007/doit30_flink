@@ -20,6 +20,8 @@ public class Kafka编程练习_消费者_判重 {
 
         // 启动数据消费线程
         new Thread(new ConsumeRunnableBloomFilter()).start();
+
+//        使用布隆过滤之后就很简单
     }
 
 

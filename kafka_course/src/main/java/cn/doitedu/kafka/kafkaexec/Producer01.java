@@ -62,7 +62,7 @@ public class Producer01 {
         int i=0;
         while (flag){
             String jsonValue = JSON.toJSONString(DataGen.getUser());
-            ProducerRecord<String, String> record = new ProducerRecord<>("doit30-events1",jsonValue);
+            ProducerRecord<String, String> record = new ProducerRecord<>("doit30-events2",jsonValue);
             producer.send(record);
 
             System.out.println("send :"+ i++ +" message");
