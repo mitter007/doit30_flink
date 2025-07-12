@@ -17,7 +17,7 @@ public class ConsumerDemo {
 
         // 构造一个properties来存放消费者客户端参数
         Properties props = new Properties();
-        props.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,"doit01:9092");
+        props.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,"Hadoop202:9092");
         props.setProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         props.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
 
@@ -40,12 +40,15 @@ public class ConsumerDemo {
         // 订阅主题（可以是多个）
         consumer.subscribe(Collections.singletonList("abcx"));
 
+
         // 显式指定消费起始偏移量
         /*TopicPartition abcxP0 = new TopicPartition("abcx", 0);
         TopicPartition abcxP1 = new TopicPartition("abcx", 1);
         consumer.seek(abcxP0,10);
         consumer.seek(abcxP1,15);*/
 
+//        TopicPartition partition= new TopicPartition(,)
+//        consumer.seek();
 
         // 循环往复拉取数据
         boolean condition = true;
@@ -72,6 +75,7 @@ public class ConsumerDemo {
                 long offset = record.offset();
 
                 // 当前这条数据所在分区的leader的朝代纪年
+//                这句话是什么意思
                 Optional<Integer> leaderEpoch = record.leaderEpoch();
 
                 // 在kafka的数据底层存储中，不光有用户的业务数据，还有大量元数据

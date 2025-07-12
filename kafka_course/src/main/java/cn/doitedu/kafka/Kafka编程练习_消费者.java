@@ -64,6 +64,7 @@ class ConsumeRunnable implements Runnable{
                 // 解析json, 拿到 guid
                 try {
                     UserEvent userEvent = JSON.parseObject(eventJson, UserEvent.class);
+//                    key不一样，值一样
                     guidMap.put(userEvent.getGuid(), "");
                 }catch (Exception e){
                     System.out.println("出异常了： " + eventJson);

@@ -1,0 +1,74 @@
+package cn.doitedu.kafka.kafkaexec;
+
+/**
+ * ClassName: Test01
+ * Package: cn.doitedu.kafka.exec
+ * Description:
+ *
+ * @Author JWT
+ * @Create 2025/7/12 10:48
+ * @Version 1.0
+ */
+
+import com.alibaba.fastjson.JSON;
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.ProducerRecord;
+
+import java.io.IOException;
+import java.util.Properties;
+
+/**
+ *
+ * 创建一个topic
+ * [root@doit01 ~]# kafka-topics.sh --create --topic doit30-events --partitions 3 --replication-factor 2 --zookeeper doit01:2181
+ *
+ * 可以用命令去监视这个topic是否有数据到达：
+ * [root@doit01 ~]# kafka-console-consumer.sh --topic doit30-events --bootstrap-server doit01:9092
+ *
+ *
+ * 需求：
+ *   写一个生产者，不断去生成 “用户行为事件”数据 并写入kafka
+ *   {"guid":1,"eventId":"pageview","timeStamp":1637868346789}
+ *   {"guid":1,"eventId":"addcart","timeStamp":1637868346966}
+ *   {"guid":2,"eventId":"applaunch","timeStamp":1637868346967}
+ *   .....
+ *
+ *   需求1： 写一个消费者，不断地从kafka中取消费如上“用户行为事件”数据，并做统计计算：
+ *       每 5分钟，输出一次截止到当时的数据中出现过的用户总数
+ *
+ *  需求2： 写一个消费者，不断地从kafka中取消费如上“用户行为事件”数据，并做如下加工处理：
+ *       给每一条数据，添加一个字段，来标识，该条数据所属的用户的id在今天是否是第一次出现，如是，则标注1 ；否则，标注0
+ *   {"guid":1,"eventId":"pageview","timeStamp":1637868346789,"flag":1}
+ *   {"guid":1,"eventId":"addcart","timeStamp":1637868346966,"flag":0}
+ *   {"guid":2,"eventId":"applaunch","timeStamp":1637868346967,"flag":1}
+ *   .......
+ *
+ *   TODO 需求3： 写一个消费者，不断地从kafka中取消费如上“用户行为事件”数据，并做统计计算：
+ *      每 5分钟，统计最近 10分钟内的用户总数并输出
+ *
+ *
+ */
+public class Producer01 {
+    public static void main(String[] args) throws IOException, InterruptedException {
+//        kafka-topics.sh --create --topic doit30-events --partitions 3 --replication-factor 2 --bootstrap-server hadoop202:9092
+
+
+        Properties prop = new Properties();
+        prop.load(Producer01.class.getClassLoader().getSystemResourceAsStream("consumer.properties"));
+
+        KafkaProducer<String, String> producer = new KafkaProducer<>(prop);
+
+        boolean flag =true;
+        int i=0;
+        while (flag){
+            String jsonValue = JSON.toJSONString(DataGen.getUser());
+            ProducerRecord<String, String> record = new ProducerRecord<>("doit30-events1",jsonValue);
+            producer.send(record);
+
+            System.out.println("send :"+ i++ +" message");
+            Thread.sleep(500);
+        }
+        producer.close();
+
+    }
+}

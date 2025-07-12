@@ -20,8 +20,11 @@ public class ConsumerDemo2 {
     public static void main(String[] args) throws IOException {
 
         Properties props = new Properties();
-        // 从配置文件中加载写好的参数
+        // 从配置文件中加载写好的参数   通过主类的类加载器
         props.load(ConsumerDemo2.class.getClassLoader().getResourceAsStream("consumer.properties"));
+
+
+
         // 手动再set一些参数进去
         props.setProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG,"earliest");
         props.setProperty(ConsumerConfig.GROUP_ID_CONFIG,"d30-2");
@@ -40,8 +43,9 @@ public class ConsumerDemo2 {
 
         // 既然要自己指定一个确定的起始消费位置，那通常隐含之意是不需要去参与消费组自动再均衡机制
         // 那么，就不要使用 subscribe 来订阅主题
-        consumer.assign(Arrays.asList(new TopicPartition("ddd",0)));
-        consumer.seek(new TopicPartition("ddd",0),4);
+        consumer.assign(Arrays.asList(new TopicPartition("ddd",1)));
+        consumer.seek(new TopicPartition("ddd",1),0);
+//        consumer.offsetsForTimes()
 
 
         while(true){

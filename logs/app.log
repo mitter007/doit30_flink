@@ -1,0 +1,3 @@
+[2025-07-12 12:02:49] ERROR Log4j2Demo - 这是 error 日志
+[2025-07-12 14:57:43] ERROR org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-1, groupId=do-1] Offset commit failed on partition doit30-events1-0 at offset 6662: The coordinator is not aware of this member.
+[2025-07-12 14:57:43] ERROR org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-1, groupId=do-1] Offset commit failed on partition doit30-events1-0 at offset 6673: The coordinator is not aware of this member.

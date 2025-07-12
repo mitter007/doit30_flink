@@ -27,12 +27,18 @@ public class Consumer_02 {
         properties.setProperty(ConsumerConfig.GROUP_ID_CONFIG, "do01");
         KafkaConsumer<String, String> kafkaConsumer = new KafkaConsumer<String, String>(properties);
 
+//        对称之美和规律之美
+
         kafkaConsumer.subscribe(Arrays.asList("test2"));
         boolean flag = true;
         while (flag) {
             ConsumerRecords<String, String> records = kafkaConsumer.poll(Duration.ofMillis(10));
             for (ConsumerRecord<String, String> record : records) {
                 System.out.println(record.key());
+                record.topic();
+                record.partition();
+                record.offset();
+                record.leaderEpoch();
 
                 System.out.println(record.value());
             }

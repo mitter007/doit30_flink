@@ -4,14 +4,10 @@ import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
-import org.apache.kafka.clients.producer.KafkaProducer;
-import org.apache.kafka.clients.producer.ProducerConfig;
-import org.apache.kafka.clients.producer.ProducerRecord;
 
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.Properties;
-import java.util.TreeMap;
 
 /**
  * ClassName: Consumer_01
@@ -29,6 +25,9 @@ public class Consumer_01 {
         properties.setProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
         properties.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
         properties.setProperty(ConsumerConfig.GROUP_ID_CONFIG, "do01");
+
+//        kafka的消费者，默认是从所属组之前所记录的偏移量开始消费，如果找不到之前记录的偏移量，则从如下参数配置的策略来确定消费起始偏移量
+        properties.setProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "latest");
         KafkaConsumer<String, String> kafkaConsumer = new KafkaConsumer<>(properties);
 
         kafkaConsumer.subscribe(Arrays.asList("test1"));

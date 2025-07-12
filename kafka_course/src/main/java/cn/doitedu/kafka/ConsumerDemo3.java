@@ -23,12 +23,13 @@ public class ConsumerDemo3 {
         // 手动再set一些参数进去
         props.setProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG,"earliest");
         props.setProperty(ConsumerConfig.GROUP_ID_CONFIG,"d30-2");
+        props.setProperty(ConsumerConfig.PARTITION_ASSIGNMENT_STRATEGY_CONFIG,"d30-2");
         // 指定消费者再均衡策略
         props.setProperty(ConsumerConfig.PARTITION_ASSIGNMENT_STRATEGY_CONFIG,RangeAssignor.class.getName());
 
         KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
 
-
+//      Strategy
         // reb-1 主题： 3个分区
         // reb-2 主题： 2个分区
         consumer.subscribe(Arrays.asList("reb-1", "reb-2"), new ConsumerRebalanceListener() {
@@ -53,4 +54,31 @@ public class ConsumerDemo3 {
         }
 
     }
+
+
+//    消费者再平衡策略
+//    1 Range Strategy
+
+//    先将消费者按照 client.id 字典排序，然后按 topic 逐个处理；
+//             针对一个 topic，将其 partition 总数/消费者数得到 商 n 和 余数 m，则每个 consumer 至少分到 n
+//    个分区，且前 m
+//    2 Round-Robin Strategy
+
+//   3  Sticky Strategy
+
+//    4 Cooperative Sticky Strategy
+
+//    消费者组再均衡流程
+//    消费组在消费数据的时候，有两个角色进行组内的各事务的协调；
+//    角色 1： Group Coordinator （组协调器） 位于服务端（就是某个 broker）
+//    角色 2： Group Leader （组长） 位于消费端（就是消费组中的某个消费者）
+
+
+//    Coordinator     组 协调器
+
+
+
+
+
+
 }
