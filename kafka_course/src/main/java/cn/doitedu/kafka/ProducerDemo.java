@@ -44,19 +44,20 @@ public class ProducerDemo {
         // 检查是否发送成功的消费者命令：
         //    kafka-console-consumer.sh  --bootstrap-server doit01:9092 --topic abcx
         //    kafka-console-consumer.sh  --bootstrap-server doit01:9092 --topic abcy
-        for(int i=0;i<1000;i++){
+        for(int i=11;i<20;i++){
             // 将业务数据封装成客户端所能发送的封装格式
             // 0->abc0
             // 1->abc1
+            int partition = i % 3;
 
             // TODO 请修改此处逻辑： i奇数的业务数据，发到 abcx  ;    i为偶数的业务数据，发到 abcy
-            ProducerRecord<String, String> message = new ProducerRecord<>("ddd", 1,"user_id:"+i, "doit_edu_" + i);
+            ProducerRecord<String, String> message = new ProducerRecord<>("user_info", partition,"user_id:"+i, i+",小明,1,2" );
 
             // 调用客户端去发送
             // 数据的发送动作在producer的底层是异步线程去异步发送的
             producer.send(message);
 
-            Thread.sleep(500);
+            Thread.sleep(100);
         }
 
 
