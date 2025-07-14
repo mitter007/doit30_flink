@@ -16,6 +16,8 @@ import java.util.*;
  * 利用kafka自身的事务机制，来实现 端到端的eos语义
  * 核心点： 让 消费端的偏移量记录更新  和   生产端的数据落地  ，绑定在一个事务中
  */
+
+//  kafka的脏读 有一个参数 isonlation=read_commited || isonlation=read_uncommited
 public class Kafka自身事务机制 {
 
     public static void main(String[] args) {
