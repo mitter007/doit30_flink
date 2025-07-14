@@ -122,6 +122,7 @@ public class ConsumerExactlyOnce_01 {
                     conn.commit();
                 } catch (Exception e) {
                     e.printStackTrace();
+//                    mysql的事务
                     conn.rollback();  // 事务回滚
                 }
             }

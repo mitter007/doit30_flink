@@ -32,7 +32,7 @@ import java.util.Properties;
  * `offset` bigint(20) DEFAULT NULL,
  * PRIMARY KEY (`topic_partition`)
  * ) ENGINE=InnoDB DEFAULT CHARSET=utf8;*/
-public class ConsumerExactlyOnce01 {
+public class ConsumerExactlyOnce_02 {
 
     public static void main(String[] args) throws SQLException {
 
@@ -48,68 +48,78 @@ public class ConsumerExactlyOnce01 {
 
 
         KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
+
+        consumer.subscribe(Arrays.asList("user_info"));
         // 创建一个jdbc连接
-        Connection conn = DriverManager.getConnection("jdbc:mysql://hadoop202:3306/test", "root", "000000");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3308/test", "root", "123456");
         // 关闭jdbc的自动事务提交
+
+//       为什么要关闭自动提交？
+
+
         conn.setAutoCommit(false);
 
         // 定义一个业务数据插入语句
         PreparedStatement pstData = conn.prepareStatement("insert into stu_info values ( ? , ? , ? , ?)");
 
         // 定义一个偏移量更新语句
+
+//        实际作用：
+//        用于实现类似**"有就更新、没有就插入"**（upsert）的功能。
+//
+//        常见于：
+//        Kafka 消费进度（topic-partition → offset）记录
+//        用户登录时间、统计信息等“不断覆盖更新”的场景
+//        insert into t_offsets values(? , ?) on DUPLICATE KEY UPDATE offset= ?
+
+
         PreparedStatement pstOffset = conn.prepareStatement("insert into t_offsets values(? , ?) on DUPLICATE KEY UPDATE offset= ?");
 
         //
         PreparedStatement pstQueryOffset = conn.prepareStatement("select offset  from t_offsets where topic_partition = ?");
 
+        consumer.subscribe(Arrays.asList("user_info"), new ConsumerRebalanceListener() {
 
-        // 订阅主题
-        // TODO 需要把消费起始位置，初始化成上一次运行所记录的消费位移
-        // TODO 而且，还要考虑一个问题： 消费组再均衡时会发生什么
-        consumer.subscribe(Arrays.asList("user-info"), new ConsumerRebalanceListener() {
-
-            // 被剥夺了分区消费权后调用下面的方法
             @Override
             public void onPartitionsRevoked(Collection<TopicPartition> partitions) {
-
+                System.out.println("再平衡了");
 
             }
 
-            // 被分配了新的分区消费权后调用的方法   消费者再均衡，从哪里消费是从再均衡来的。
-
-//            程序启动时  offset启动初始化，再均衡时再均衡
-//            起始位置的初始化
             @Override
             public void onPartitionsAssigned(Collection<TopicPartition> partitions) {
 
-                try {
-                    for (TopicPartition topicPartition : partitions) {
-                        // 去查询mysql中的t_offsets表，得到自己拥有消费权的分区的消费位移记录
-                        pstQueryOffset.setString(1, topicPartition.topic() + ":" + topicPartition.partition());
+                for (TopicPartition partition : partitions) {
+
+                    try {
+                        pstQueryOffset.setString(1,partition.topic()+":"+partition.partition());
                         ResultSet resultSet = pstQueryOffset.executeQuery();
                         resultSet.next();
                         long offset = resultSet.getLong("offset");
+                        consumer.seek(partition,offset);
+                        System.out.println("发生了再均衡，被分配了分区消费权，并查询到了目标分区之前提交的偏移量： " + partition + ", " + offset);
 
-                        System.out.println("发生了再均衡，被分配了分区消费权，并查询到了目标分区之前提交的偏移量： " + topicPartition + ", " + offset);
-
-                        // 将消费起始位置初始化为 数据库中查询到的偏移量
-                        consumer.seek(topicPartition, offset);
+                    } catch (SQLException e) {
+                        throw new RuntimeException(e);
                     }
 
-                } catch (Exception e) {
-                    e.printStackTrace();
                 }
+
             }
         });
 
 
-
+        // 订阅主题
+        // TODO 需要把消费起始位置，初始化成上一次运行所记录的消费位移
+        // TODO 而且，还要考虑一个问题： 消费组再均衡时会发生什么
 
         boolean run = true;
         while (run) {
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(5000));
             // 遍历拉到的这一批数据
             for (ConsumerRecord<String, String> record : records) {
+                long offset = record.offset();
+                System.out.println(offset);
 
                 try {
                     String data = record.value();
@@ -119,10 +129,10 @@ public class ConsumerExactlyOnce01 {
                     // 替换插入语句中的占位符
                     pstData.setInt(1, Integer.parseInt(fields[0]));
                     pstData.setString(2, fields[1]);
-                    pstData.setInt(3, Integer.parseInt(fields[2]));
+                    pstData.setInt(3,Integer.parseInt(String.valueOf(offset)));
                     pstData.setString(4, fields[3]);
 
-                    // 执行业务数据插入语句
+                     // 执行业务数据插入语句
                     pstData.execute();
 
                     // 替换偏移量更新语句中的占位符
@@ -132,15 +142,13 @@ public class ConsumerExactlyOnce01 {
 
                     // 人为埋一个异常 ，来测试  事务控制是否生效
                     /*if (fields[0].equals("4")) throw new Exception("哈哈哈，抛给你看");*/
-
-
                     // 执行偏移量更新语句
                     pstOffset.execute();
-
                     // 提交jdbc事务
                     conn.commit();
                 } catch (Exception e) {
                     e.printStackTrace();
+//                    mysql的事务
                     conn.rollback();  // 事务回滚
                 }
             }

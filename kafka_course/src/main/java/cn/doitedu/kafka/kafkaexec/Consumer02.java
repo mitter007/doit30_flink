@@ -12,9 +12,11 @@ package cn.doitedu.kafka.kafkaexec;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import org.apache.kafka.clients.consumer.ConsumerRebalanceListener;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.apache.kafka.common.TopicPartition;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -50,7 +52,18 @@ public class Consumer02 {
 
         KafkaConsumer<String, String> kafkaConsumer = new KafkaConsumer<>(prop);
 
-        kafkaConsumer.subscribe(Arrays.asList("doit30-events2"));
+        kafkaConsumer.subscribe(Arrays.asList("doit30-events2"), new ConsumerRebalanceListener() {
+            @Override
+            public void onPartitionsRevoked(Collection<TopicPartition> partitions) {
+
+
+            }
+
+            @Override
+            public void onPartitionsAssigned(Collection<TopicPartition> partitions) {
+
+            }
+        });
 //              定时过滤器
 
         Timer timer = new Timer();

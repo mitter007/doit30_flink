@@ -31,7 +31,7 @@ public class ConsumerDemo3 {
 
 //      Strategy
         // reb-1 主题： 3个分区
-        // reb-2 主题： 2个分区
+        // reb-2 主题： 2个分区  启动是也是一个再均衡           ConsumerRebalanceListener 再均衡监听器
         consumer.subscribe(Arrays.asList("reb-1", "reb-2"), new ConsumerRebalanceListener() {
             // 再均衡过程中，消费者会被取消先前所分配的主题，分区
             // 取消了之后，consumer底层就会调用下面的方法

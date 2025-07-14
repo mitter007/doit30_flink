@@ -89,10 +89,12 @@
             <artifactId>log4j-api</artifactId>
             <version>2.20.0</version>
         </dependency>
-
-
-
-
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>6.2.8-ccs</version>
+            <scope>compile</scope>
+        </dependency>
 
 
     </dependencies>
