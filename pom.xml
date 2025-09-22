@@ -12,6 +12,7 @@
         <module>kafka_course</module>
         <module>flink_course</module>
         <module>datagen</module>
+        <module>javaSE</module>
     </modules>
 
     <properties>

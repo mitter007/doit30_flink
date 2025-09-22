@@ -77,6 +77,7 @@ public class _13_SideOutput_Demo {
         launchStream.print("launch");
 
         backStream.print("back");
+        processed.print("processed>>>>");
 
 
         env.execute();

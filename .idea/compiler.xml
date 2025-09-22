@@ -7,8 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="flink_course" />
-        <module name="kafka_course" />
         <module name="datagen" />
+        <module name="javaSE" />
+        <module name="kafka_course" />
       </profile>
     </annotationProcessing>
   </component>

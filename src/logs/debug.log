@@ -1,0 +1,612 @@
+2025-09-22 08:53:37  [ main:0 ] - [ INFO ]  The configuration option taskmanager.cpu.cores required for local execution is not set, setting it to the maximal possible value.
+2025-09-22 08:53:37  [ main:2 ] - [ INFO ]  The configuration option taskmanager.memory.task.heap.size required for local execution is not set, setting it to the maximal possible value.
+2025-09-22 08:53:37  [ main:2 ] - [ INFO ]  The configuration option taskmanager.memory.task.off-heap.size required for local execution is not set, setting it to the maximal possible value.
+2025-09-22 08:53:37  [ main:3 ] - [ INFO ]  The configuration option taskmanager.memory.network.min required for local execution is not set, setting it to its default value 64 mb.
+2025-09-22 08:53:37  [ main:3 ] - [ INFO ]  The configuration option taskmanager.memory.network.max required for local execution is not set, setting it to its default value 64 mb.
+2025-09-22 08:53:37  [ main:3 ] - [ INFO ]  The configuration option taskmanager.memory.managed.size required for local execution is not set, setting it to its default value 128 mb.
+2025-09-22 08:53:37  [ main:7 ] - [ INFO ]  Starting Flink Mini Cluster
+2025-09-22 08:53:37  [ main:758 ] - [ INFO ]  Starting Metrics Registry
+2025-09-22 08:53:37  [ main:793 ] - [ INFO ]  No metrics reporter configured, no metrics will be exposed/reported.
+2025-09-22 08:53:37  [ main:793 ] - [ INFO ]  Starting RPC Service(s)
+2025-09-22 08:53:37  [ main:803 ] - [ INFO ]  Trying to start local actor system
+2025-09-22 08:53:38  [ flink-akka.actor.default-dispatcher-4:1286 ] - [ INFO ]  Slf4jLogger started
+2025-09-22 08:53:38  [ main:1364 ] - [ INFO ]  Actor system started at akka://flink
+2025-09-22 08:53:38  [ main:1384 ] - [ INFO ]  Trying to start local actor system
+2025-09-22 08:53:38  [ flink-metrics-5:1391 ] - [ INFO ]  Slf4jLogger started
+2025-09-22 08:53:38  [ main:1398 ] - [ INFO ]  Actor system started at akka://flink-metrics
+2025-09-22 08:53:38  [ main:1409 ] - [ INFO ]  Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at akka://flink-metrics/user/rpc/MetricQueryService .
+2025-09-22 08:53:38  [ main:1453 ] - [ INFO ]  Starting high-availability services
+2025-09-22 08:53:38  [ main:1466 ] - [ INFO ]  Created BLOB server storage directory C:\Users\JWT\AppData\Local\Temp\blobStore-53d3bedd-bf2c-449f-a6a7-0696061dae08
+2025-09-22 08:53:38  [ main:1469 ] - [ INFO ]  Started BLOB server at 0.0.0.0:9458 - max concurrent requests: 50 - max backlog: 1000
+2025-09-22 08:53:38  [ main:1479 ] - [ INFO ]  Created BLOB cache storage directory C:\Users\JWT\AppData\Local\Temp\blobStore-ac58368a-fd7d-4f6a-9d8e-d59a9034925f
+2025-09-22 08:53:38  [ main:1480 ] - [ INFO ]  Created BLOB cache storage directory C:\Users\JWT\AppData\Local\Temp\blobStore-a66a516f-1e77-4d86-8d92-274c45df44ee
+2025-09-22 08:53:38  [ main:1480 ] - [ INFO ]  Starting 1 TaskManager(s)
+2025-09-22 08:53:38  [ main:1484 ] - [ INFO ]  Starting TaskManager with ResourceID: 3d38829a-4f65-4a3a-b5e0-51acf00b178c
+2025-09-22 08:53:38  [ main:1498 ] - [ INFO ]  Temporary file directory 'C:\Users\JWT\AppData\Local\Temp': total 400 GB, usable 262 GB (65.50% usable)
+2025-09-22 08:53:38  [ main:1503 ] - [ INFO ]  Created a new FileChannelManager for spilling of task related data to disk (joins, sorting, ...). Used directories:
+	C:\Users\JWT\AppData\Local\Temp\flink-io-462f8978-4f59-4c41-b973-b37cb64142c8
+2025-09-22 08:53:38  [ main:1515 ] - [ INFO ]  Created a new FileChannelManager for storing result partitions of BLOCKING shuffles. Used directories:
+	C:\Users\JWT\AppData\Local\Temp\flink-netty-shuffle-370e8657-22ec-41d1-ab07-97a71cc467f4
+2025-09-22 08:53:38  [ main:1550 ] - [ INFO ]  Allocated 64 MB for network buffer pool (number of memory segments: 2048, bytes per segment: 32768).
+2025-09-22 08:53:38  [ main:1563 ] - [ INFO ]  Starting the network environment and its components.
+2025-09-22 08:53:38  [ main:1565 ] - [ INFO ]  Starting the kvState service and its components.
+2025-09-22 08:53:38  [ main:1578 ] - [ INFO ]  Config uses fallback configuration key 'akka.ask.timeout' instead of key 'taskmanager.slot.timeout'
+2025-09-22 08:53:38  [ main:1591 ] - [ INFO ]  Starting RPC endpoint for org.apache.flink.runtime.taskexecutor.TaskExecutor at akka://flink/user/rpc/taskmanager_0 .
+2025-09-22 08:53:38  [ flink-akka.actor.default-dispatcher-4:1605 ] - [ INFO ]  Start job leader service.
+2025-09-22 08:53:38  [ flink-akka.actor.default-dispatcher-4:1607 ] - [ INFO ]  User file cache uses directory C:\Users\JWT\AppData\Local\Temp\flink-dist-cache-f153c845-9444-4543-94e9-a2d060579828
+2025-09-22 08:53:38  [ main:1650 ] - [ INFO ]  Starting rest endpoint.
+2025-09-22 08:53:38  [ main:1923 ] - [ WARN ]  Log file environment variable 'log.file' is not set.
+2025-09-22 08:53:38  [ main:1923 ] - [ WARN ]  JobManager log files are unavailable in the web dashboard. Log file location not found in environment variable 'log.file' or configuration key 'web.log.path'.
+2025-09-22 08:53:39  [ main:2668 ] - [ INFO ]  Rest endpoint listening at localhost:9533
+2025-09-22 08:53:39  [ main:2669 ] - [ INFO ]  Proposing leadership to contender http://localhost:9533
+2025-09-22 08:53:39  [ main:2672 ] - [ INFO ]  Web frontend listening at http://localhost:9533.
+2025-09-22 08:53:39  [ mini-cluster-io-thread-1:2672 ] - [ INFO ]  http://localhost:9533 was granted leadership with leaderSessionID=48a3021b-f534-45fc-bcf1-ed7ab68461c9
+2025-09-22 08:53:39  [ mini-cluster-io-thread-1:2672 ] - [ INFO ]  Received confirmation of leadership for leader http://localhost:9533 , session=48a3021b-f534-45fc-bcf1-ed7ab68461c9
+2025-09-22 08:53:39  [ main:2683 ] - [ INFO ]  Proposing leadership to contender LeaderContender: DefaultDispatcherRunner
+2025-09-22 08:53:39  [ main:2683 ] - [ INFO ]  Starting resource manager service.
+2025-09-22 08:53:39  [ main:2683 ] - [ INFO ]  Proposing leadership to contender LeaderContender: ResourceManagerServiceImpl
+2025-09-22 08:53:39  [ mini-cluster-io-thread-2:2683 ] - [ INFO ]  DefaultDispatcherRunner was granted leadership with leader id be6fef10-13d7-411e-83be-af13a4117848. Creating new DispatcherLeaderProcess.
+2025-09-22 08:53:39  [ pool-2-thread-1:2684 ] - [ INFO ]  Resource manager service is granted leadership with session id 94840565-5972-452c-bbd6-fd17e48eed8c.
+2025-09-22 08:53:39  [ main:2687 ] - [ INFO ]  Flink Mini Cluster started successfully
+2025-09-22 08:53:39  [ mini-cluster-io-thread-2:2689 ] - [ INFO ]  Start SessionDispatcherLeaderProcess.
+2025-09-22 08:53:39  [ mini-cluster-io-thread-1:2690 ] - [ INFO ]  Recover all persisted job graphs.
+2025-09-22 08:53:39  [ mini-cluster-io-thread-1:2691 ] - [ INFO ]  Successfully recovered 0 persisted job graphs.
+2025-09-22 08:53:39  [ mini-cluster-io-thread-1:2698 ] - [ INFO ]  Starting RPC endpoint for org.apache.flink.runtime.dispatcher.StandaloneDispatcher at akka://flink/user/rpc/dispatcher_1 .
+2025-09-22 08:53:39  [ pool-2-thread-1:2699 ] - [ INFO ]  Starting RPC endpoint for org.apache.flink.runtime.resourcemanager.StandaloneResourceManager at akka://flink/user/rpc/resourcemanager_2 .
+2025-09-22 08:53:39  [ mini-cluster-io-thread-1:2713 ] - [ INFO ]  Received confirmation of leadership for leader akka://flink/user/rpc/dispatcher_1 , session=be6fef10-13d7-411e-83be-af13a4117848
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-4:2714 ] - [ INFO ]  Starting the resource manager.
+2025-09-22 08:53:39  [ mini-cluster-io-thread-2:2723 ] - [ INFO ]  Received confirmation of leadership for leader akka://flink/user/rpc/resourcemanager_2 , session=94840565-5972-452c-bbd6-fd17e48eed8c
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-4:2744 ] - [ INFO ]  Connecting to ResourceManager akka://flink/user/rpc/resourcemanager_2(bbd6fd17e48eed8c948405655972452c).
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-7:2751 ] - [ INFO ]  Resolved ResourceManager address, beginning registration
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-7:2753 ] - [ INFO ]  Received JobGraph submission 'Flink Streaming Job' (bfba8d24a544d5d6c8631bb668d84ab2).
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-7:2754 ] - [ INFO ]  Submitting job 'Flink Streaming Job' (bfba8d24a544d5d6c8631bb668d84ab2).
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-8:2754 ] - [ INFO ]  Registering TaskManager with ResourceID 3d38829a-4f65-4a3a-b5e0-51acf00b178c (akka://flink/user/rpc/taskmanager_0) at ResourceManager
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-6:2756 ] - [ INFO ]  Successful registration at resource manager akka://flink/user/rpc/resourcemanager_2 under registration id 9fa0a2c94dcedc5bd761d7892a274460.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-7:2766 ] - [ INFO ]  Proposing leadership to contender LeaderContender: JobMasterServiceLeadershipRunner
+2025-09-22 08:53:39  [ jobmanager-io-thread-1:2775 ] - [ INFO ]  Starting RPC endpoint for org.apache.flink.runtime.jobmaster.JobMaster at akka://flink/user/rpc/jobmanager_3 .
+2025-09-22 08:53:39  [ jobmanager-io-thread-1:2782 ] - [ INFO ]  Initializing job 'Flink Streaming Job' (bfba8d24a544d5d6c8631bb668d84ab2).
+2025-09-22 08:53:39  [ jobmanager-io-thread-1:2799 ] - [ INFO ]  Using restart back off time strategy NoRestartBackoffTimeStrategy for Flink Streaming Job (bfba8d24a544d5d6c8631bb668d84ab2).
+2025-09-22 08:53:39  [ jobmanager-io-thread-1:2829 ] - [ INFO ]  Running initialization on master for job Flink Streaming Job (bfba8d24a544d5d6c8631bb668d84ab2).
+2025-09-22 08:53:39  [ jobmanager-io-thread-1:2830 ] - [ INFO ]  Successfully ran initialization on master in 0 ms.
+2025-09-22 08:53:39  [ jobmanager-io-thread-1:2844 ] - [ INFO ]  Built 1 pipelined regions in 0 ms
+2025-09-22 08:53:39  [ jobmanager-io-thread-1:2871 ] - [ INFO ]  No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@179f1018
+2025-09-22 08:53:39  [ jobmanager-io-thread-1:2871 ] - [ INFO ]  State backend loader loads the state backend as HashMapStateBackend
+2025-09-22 08:53:39  [ jobmanager-io-thread-1:2872 ] - [ INFO ]  Checkpoint storage is set to 'jobmanager'
+2025-09-22 08:53:39  [ jobmanager-io-thread-1:2891 ] - [ INFO ]  No checkpoint found during restore.
+2025-09-22 08:53:39  [ jobmanager-io-thread-1:2897 ] - [ INFO ]  Using failover strategy org.apache.flink.runtime.executiongraph.failover.flip1.RestartPipelinedRegionFailoverStrategy@5e38e441 for Flink Streaming Job (bfba8d24a544d5d6c8631bb668d84ab2).
+2025-09-22 08:53:39  [ jobmanager-io-thread-1:2905 ] - [ INFO ]  Received confirmation of leadership for leader akka://flink/user/rpc/jobmanager_3 , session=c53b3b66-d86a-4403-b1d8-aa2e0fd76b86
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-7:2907 ] - [ INFO ]  Starting execution of job 'Flink Streaming Job' (bfba8d24a544d5d6c8631bb668d84ab2) under job master id b1d8aa2e0fd76b86c53b3b66d86a4403.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-7:2907 ] - [ INFO ]  Starting scheduling with scheduling strategy [org.apache.flink.runtime.scheduler.strategy.PipelinedRegionSchedulingStrategy]
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-7:2908 ] - [ INFO ]  Job Flink Streaming Job (bfba8d24a544d5d6c8631bb668d84ab2) switched from state CREATED to RUNNING.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-7:2911 ] - [ INFO ]  Source: Socket Stream -> Map -> Process (1/1) (f9a7f0832a2f7ac93b5d399fcf8aa5b9) switched from CREATED to SCHEDULED.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-7:2911 ] - [ INFO ]  Source: Socket Stream -> Map (1/1) (69c86b27b4c165318a4e7ba21d60014d) switched from CREATED to SCHEDULED.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-7:2911 ] - [ INFO ]  Co-Process-Broadcast -> Sink Unnamed (1/1) (5788b56b4b3d524e093eac3912ba3e89) switched from CREATED to SCHEDULED.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-7:2911 ] - [ INFO ]  Keyed Aggregation -> Sink: Unnamed (1/1) (529eff84e8a3cd91bf9b428665788017) switched from CREATED to SCHEDULED.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-7:2927 ] - [ INFO ]  Connecting to ResourceManager akka://flink/user/rpc/resourcemanager_2(bbd6fd17e48eed8c948405655972452c)
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-6:2929 ] - [ INFO ]  Resolved ResourceManager address, beginning registration
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-7:2931 ] - [ INFO ]  Registering job manager b1d8aa2e0fd76b86c53b3b66d86a4403@akka://flink/user/rpc/jobmanager_3 for job bfba8d24a544d5d6c8631bb668d84ab2.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-6:2934 ] - [ INFO ]  Registered job manager b1d8aa2e0fd76b86c53b3b66d86a4403@akka://flink/user/rpc/jobmanager_3 for job bfba8d24a544d5d6c8631bb668d84ab2.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-6:2936 ] - [ INFO ]  JobManager successfully registered at ResourceManager, leader id: bbd6fd17e48eed8c948405655972452c.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-7:2938 ] - [ INFO ]  Received resource requirements from job bfba8d24a544d5d6c8631bb668d84ab2: [ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}]
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-8:2941 ] - [ INFO ]  Receive slot request ecc9a912c59bc990d39b7b8def87e1ca for job bfba8d24a544d5d6c8631bb668d84ab2 from resource manager with leader id bbd6fd17e48eed8c948405655972452c.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-8:2946 ] - [ INFO ]  Allocated slot for ecc9a912c59bc990d39b7b8def87e1ca.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-8:2947 ] - [ INFO ]  Add job bfba8d24a544d5d6c8631bb668d84ab2 for job leader monitoring.
+2025-09-22 08:53:39  [ mini-cluster-io-thread-2:2949 ] - [ INFO ]  Try to register at job manager akka://flink/user/rpc/jobmanager_3 with leader id c53b3b66-d86a-4403-b1d8-aa2e0fd76b86.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-8:2950 ] - [ INFO ]  Resolved JobManager address, beginning registration
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-8:2954 ] - [ INFO ]  Successful registration at job manager akka://flink/user/rpc/jobmanager_3 for job bfba8d24a544d5d6c8631bb668d84ab2.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-8:2955 ] - [ INFO ]  Establish JobManager connection for job bfba8d24a544d5d6c8631bb668d84ab2.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-8:2958 ] - [ INFO ]  Offer reserved slots to the leader of job bfba8d24a544d5d6c8631bb668d84ab2.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-4:2966 ] - [ INFO ]  Source: Socket Stream -> Map -> Process (1/1) (f9a7f0832a2f7ac93b5d399fcf8aa5b9) switched from SCHEDULED to DEPLOYING.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-4:2967 ] - [ INFO ]  Deploying Source: Socket Stream -> Map -> Process (1/1) (attempt #0) with attempt id f9a7f0832a2f7ac93b5d399fcf8aa5b9 to 3d38829a-4f65-4a3a-b5e0-51acf00b178c @ sync-v3.getpostman.com (dataPort=-1) with allocation id ecc9a912c59bc990d39b7b8def87e1ca
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-4:2972 ] - [ INFO ]  Source: Socket Stream -> Map (1/1) (69c86b27b4c165318a4e7ba21d60014d) switched from SCHEDULED to DEPLOYING.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-8:2972 ] - [ INFO ]  Activate slot ecc9a912c59bc990d39b7b8def87e1ca.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-4:2972 ] - [ INFO ]  Deploying Source: Socket Stream -> Map (1/1) (attempt #0) with attempt id 69c86b27b4c165318a4e7ba21d60014d to 3d38829a-4f65-4a3a-b5e0-51acf00b178c @ sync-v3.getpostman.com (dataPort=-1) with allocation id ecc9a912c59bc990d39b7b8def87e1ca
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-4:2974 ] - [ INFO ]  Co-Process-Broadcast -> Sink Unnamed (1/1) (5788b56b4b3d524e093eac3912ba3e89) switched from SCHEDULED to DEPLOYING.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-4:2975 ] - [ INFO ]  Deploying Co-Process-Broadcast -> Sink Unnamed (1/1) (attempt #0) with attempt id 5788b56b4b3d524e093eac3912ba3e89 to 3d38829a-4f65-4a3a-b5e0-51acf00b178c @ sync-v3.getpostman.com (dataPort=-1) with allocation id ecc9a912c59bc990d39b7b8def87e1ca
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-4:2980 ] - [ INFO ]  Keyed Aggregation -> Sink: Unnamed (1/1) (529eff84e8a3cd91bf9b428665788017) switched from SCHEDULED to DEPLOYING.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-4:2981 ] - [ INFO ]  Deploying Keyed Aggregation -> Sink: Unnamed (1/1) (attempt #0) with attempt id 529eff84e8a3cd91bf9b428665788017 to 3d38829a-4f65-4a3a-b5e0-51acf00b178c @ sync-v3.getpostman.com (dataPort=-1) with allocation id ecc9a912c59bc990d39b7b8def87e1ca
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-8:2986 ] - [ INFO ]  StateChangelogStorageLoader initialized with shortcut names {memory}.
+2025-09-22 08:53:39  [ flink-akka.actor.default-dispatcher-8:2987 ] - [ INFO ]  Creating a changelog storage with name 'memory'.
+2025-09-22 08:53:40  [ flink-akka.actor.default-dispatcher-8:3004 ] - [ INFO ]  Received task Source: Socket Stream -> Map -> Process (1/1)#0 (f9a7f0832a2f7ac93b5d399fcf8aa5b9), deploy into slot with allocation id ecc9a912c59bc990d39b7b8def87e1ca.
+2025-09-22 08:53:40  [ Source: Socket Stream -> Map -> Process (1/1)#0:3005 ] - [ INFO ]  Source: Socket Stream -> Map -> Process (1/1)#0 (f9a7f0832a2f7ac93b5d399fcf8aa5b9) switched from CREATED to DEPLOYING.
+2025-09-22 08:53:40  [ flink-akka.actor.default-dispatcher-8:3007 ] - [ INFO ]  Activate slot ecc9a912c59bc990d39b7b8def87e1ca.
+2025-09-22 08:53:40  [ flink-akka.actor.default-dispatcher-8:3009 ] - [ INFO ]  Received task Source: Socket Stream -> Map (1/1)#0 (69c86b27b4c165318a4e7ba21d60014d), deploy into slot with allocation id ecc9a912c59bc990d39b7b8def87e1ca.
+2025-09-22 08:53:40  [ Source: Socket Stream -> Map -> Process (1/1)#0:3010 ] - [ INFO ]  Loading JAR files for task Source: Socket Stream -> Map -> Process (1/1)#0 (f9a7f0832a2f7ac93b5d399fcf8aa5b9) [DEPLOYING].
+2025-09-22 08:53:40  [ Source: Socket Stream -> Map (1/1)#0:3010 ] - [ INFO ]  Source: Socket Stream -> Map (1/1)#0 (69c86b27b4c165318a4e7ba21d60014d) switched from CREATED to DEPLOYING.
+2025-09-22 08:53:40  [ Source: Socket Stream -> Map (1/1)#0:3010 ] - [ INFO ]  Loading JAR files for task Source: Socket Stream -> Map (1/1)#0 (69c86b27b4c165318a4e7ba21d60014d) [DEPLOYING].
+2025-09-22 08:53:40  [ flink-akka.actor.default-dispatcher-8:3010 ] - [ INFO ]  Activate slot ecc9a912c59bc990d39b7b8def87e1ca.
+2025-09-22 08:53:40  [ flink-akka.actor.default-dispatcher-8:3020 ] - [ INFO ]  Received task Co-Process-Broadcast -> Sink Unnamed (1/1)#0 (5788b56b4b3d524e093eac3912ba3e89), deploy into slot with allocation id ecc9a912c59bc990d39b7b8def87e1ca.
+2025-09-22 08:53:40  [ Co-Process-Broadcast -> Sink Unnamed (1/1)#0:3021 ] - [ INFO ]  Co-Process-Broadcast -> Sink Unnamed (1/1)#0 (5788b56b4b3d524e093eac3912ba3e89) switched from CREATED to DEPLOYING.
+2025-09-22 08:53:40  [ flink-akka.actor.default-dispatcher-8:3021 ] - [ INFO ]  Activate slot ecc9a912c59bc990d39b7b8def87e1ca.
+2025-09-22 08:53:40  [ Co-Process-Broadcast -> Sink Unnamed (1/1)#0:3021 ] - [ INFO ]  Loading JAR files for task Co-Process-Broadcast -> Sink Unnamed (1/1)#0 (5788b56b4b3d524e093eac3912ba3e89) [DEPLOYING].
+2025-09-22 08:53:40  [ flink-akka.actor.default-dispatcher-8:3024 ] - [ INFO ]  Received task Keyed Aggregation -> Sink: Unnamed (1/1)#0 (529eff84e8a3cd91bf9b428665788017), deploy into slot with allocation id ecc9a912c59bc990d39b7b8def87e1ca.
+2025-09-22 08:53:40  [ Keyed Aggregation -> Sink: Unnamed (1/1)#0:3024 ] - [ INFO ]  Keyed Aggregation -> Sink: Unnamed (1/1)#0 (529eff84e8a3cd91bf9b428665788017) switched from CREATED to DEPLOYING.
+2025-09-22 08:53:40  [ Keyed Aggregation -> Sink: Unnamed (1/1)#0:3024 ] - [ INFO ]  Loading JAR files for task Keyed Aggregation -> Sink: Unnamed (1/1)#0 (529eff84e8a3cd91bf9b428665788017) [DEPLOYING].
+2025-09-22 08:53:40  [ flink-akka.actor.default-dispatcher-8:3024 ] - [ INFO ]  Activate slot ecc9a912c59bc990d39b7b8def87e1ca.
+2025-09-22 08:53:40  [ Source: Socket Stream -> Map (1/1)#0:3036 ] - [ INFO ]  No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@70b853dc
+2025-09-22 08:53:40  [ Source: Socket Stream -> Map -> Process (1/1)#0:3036 ] - [ INFO ]  No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@7d907f5b
+2025-09-22 08:53:40  [ Co-Process-Broadcast -> Sink Unnamed (1/1)#0:3036 ] - [ INFO ]  No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@549644b7
+2025-09-22 08:53:40  [ Keyed Aggregation -> Sink: Unnamed (1/1)#0:3036 ] - [ INFO ]  No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@7c36d702
+2025-09-22 08:53:40  [ Keyed Aggregation -> Sink: Unnamed (1/1)#0:3037 ] - [ INFO ]  State backend loader loads the state backend as HashMapStateBackend
+2025-09-22 08:53:40  [ Co-Process-Broadcast -> Sink Unnamed (1/1)#0:3037 ] - [ INFO ]  State backend loader loads the state backend as HashMapStateBackend
+2025-09-22 08:53:40  [ Co-Process-Broadcast -> Sink Unnamed (1/1)#0:3037 ] - [ INFO ]  Checkpoint storage is set to 'jobmanager'
+2025-09-22 08:53:40  [ Keyed Aggregation -> Sink: Unnamed (1/1)#0:3037 ] - [ INFO ]  Checkpoint storage is set to 'jobmanager'
+2025-09-22 08:53:40  [ Source: Socket Stream -> Map -> Process (1/1)#0:3037 ] - [ INFO ]  State backend loader loads the state backend as HashMapStateBackend
+2025-09-22 08:53:40  [ Source: Socket Stream -> Map (1/1)#0:3036 ] - [ INFO ]  State backend loader loads the state backend as HashMapStateBackend
+2025-09-22 08:53:40  [ Source: Socket Stream -> Map -> Process (1/1)#0:3038 ] - [ INFO ]  Checkpoint storage is set to 'jobmanager'
+2025-09-22 08:53:40  [ Source: Socket Stream -> Map (1/1)#0:3038 ] - [ INFO ]  Checkpoint storage is set to 'jobmanager'
+2025-09-22 08:53:40  [ Keyed Aggregation -> Sink: Unnamed (1/1)#0:3043 ] - [ INFO ]  Keyed Aggregation -> Sink: Unnamed (1/1)#0 (529eff84e8a3cd91bf9b428665788017) switched from DEPLOYING to INITIALIZING.
+2025-09-22 08:53:40  [ Co-Process-Broadcast -> Sink Unnamed (1/1)#0:3043 ] - [ INFO ]  Co-Process-Broadcast -> Sink Unnamed (1/1)#0 (5788b56b4b3d524e093eac3912ba3e89) switched from DEPLOYING to INITIALIZING.
+2025-09-22 08:53:40  [ Source: Socket Stream -> Map (1/1)#0:3043 ] - [ INFO ]  Source: Socket Stream -> Map (1/1)#0 (69c86b27b4c165318a4e7ba21d60014d) switched from DEPLOYING to INITIALIZING.
+2025-09-22 08:53:40  [ Source: Socket Stream -> Map -> Process (1/1)#0:3043 ] - [ INFO ]  Source: Socket Stream -> Map -> Process (1/1)#0 (f9a7f0832a2f7ac93b5d399fcf8aa5b9) switched from DEPLOYING to INITIALIZING.
+2025-09-22 08:53:40  [ flink-akka.actor.default-dispatcher-8:3045 ] - [ INFO ]  Keyed Aggregation -> Sink: Unnamed (1/1) (529eff84e8a3cd91bf9b428665788017) switched from DEPLOYING to INITIALIZING.
+2025-09-22 08:53:40  [ flink-akka.actor.default-dispatcher-8:3046 ] - [ INFO ]  Co-Process-Broadcast -> Sink Unnamed (1/1) (5788b56b4b3d524e093eac3912ba3e89) switched from DEPLOYING to INITIALIZING.
+2025-09-22 08:53:40  [ flink-akka.actor.default-dispatcher-8:3046 ] - [ INFO ]  Source: Socket Stream -> Map (1/1) (69c86b27b4c165318a4e7ba21d60014d) switched from DEPLOYING to INITIALIZING.
+2025-09-22 08:53:40  [ flink-akka.actor.default-dispatcher-8:3047 ] - [ INFO ]  Source: Socket Stream -> Map -> Process (1/1) (f9a7f0832a2f7ac93b5d399fcf8aa5b9) switched from DEPLOYING to INITIALIZING.
+2025-09-22 08:53:40  [ Source: Socket Stream -> Map -> Process (1/1)#0:3136 ] - [ INFO ]  Source: Socket Stream -> Map -> Process (1/1)#0 (f9a7f0832a2f7ac93b5d399fcf8aa5b9) switched from INITIALIZING to RUNNING.
+2025-09-22 08:53:40  [ Source: Socket Stream -> Map (1/1)#0:3136 ] - [ INFO ]  Source: Socket Stream -> Map (1/1)#0 (69c86b27b4c165318a4e7ba21d60014d) switched from INITIALIZING to RUNNING.
+2025-09-22 08:53:40  [ flink-akka.actor.default-dispatcher-8:3137 ] - [ INFO ]  Source: Socket Stream -> Map -> Process (1/1) (f9a7f0832a2f7ac93b5d399fcf8aa5b9) switched from INITIALIZING to RUNNING.
+2025-09-22 08:53:40  [ flink-akka.actor.default-dispatcher-8:3138 ] - [ INFO ]  Source: Socket Stream -> Map (1/1) (69c86b27b4c165318a4e7ba21d60014d) switched from INITIALIZING to RUNNING.
+2025-09-22 08:53:40  [ Legacy Source Thread - Source: Socket Stream -> Map -> Process (1/1)#0:3141 ] - [ INFO ]  Connecting to server socket localhost:9991
+2025-09-22 08:53:40  [ Legacy Source Thread - Source: Socket Stream -> Map (1/1)#0:3141 ] - [ INFO ]  Connecting to server socket localhost:9992
+2025-09-22 08:53:40  [ Co-Process-Broadcast -> Sink Unnamed (1/1)#0:3161 ] - [ INFO ]  Co-Process-Broadcast -> Sink Unnamed (1/1)#0 (5788b56b4b3d524e093eac3912ba3e89) switched from INITIALIZING to RUNNING.
+2025-09-22 08:53:40  [ flink-akka.actor.default-dispatcher-4:3162 ] - [ INFO ]  Co-Process-Broadcast -> Sink Unnamed (1/1) (5788b56b4b3d524e093eac3912ba3e89) switched from INITIALIZING to RUNNING.
+2025-09-22 08:53:41  [ Keyed Aggregation -> Sink: Unnamed (1/1)#0:4109 ] - [ WARN ]  Keyed Aggregation -> Sink: Unnamed (1/1)#0 (529eff84e8a3cd91bf9b428665788017) switched from INITIALIZING to FAILED with failure cause: java.io.IOException: unable to open JDBC writer
+	at org.apache.flink.connector.jdbc.internal.JdbcOutputFormat.open(JdbcOutputFormat.java:145)
+	at org.apache.flink.connector.jdbc.internal.GenericJdbcSinkFunction.open(GenericJdbcSinkFunction.java:52)
+	at org.apache.flink.api.common.functions.util.FunctionUtils.openFunction(FunctionUtils.java:34)
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.open(AbstractUdfStreamOperator.java:100)
+	at org.apache.flink.streaming.api.operators.StreamSink.open(StreamSink.java:46)
+	at org.apache.flink.streaming.runtime.tasks.RegularOperatorChain.initializeStateAndOpenOperators(RegularOperatorChain.java:110)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreGates(StreamTask.java:711)
+	at org.apache.flink.streaming.runtime.tasks.StreamTaskActionExecutor$1.call(StreamTaskActionExecutor.java:55)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreInternal(StreamTask.java:687)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restore(StreamTask.java:654)
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:958)
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:927)
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:766)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:575)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'abc'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at org.apache.flink.connector.jdbc.internal.connection.SimpleJdbcConnectionProvider.getOrEstablishConnection(SimpleJdbcConnectionProvider.java:112)
+	at org.apache.flink.connector.jdbc.internal.JdbcOutputFormat.open(JdbcOutputFormat.java:143)
+	... 14 more
+
+2025-09-22 08:53:41  [ Keyed Aggregation -> Sink: Unnamed (1/1)#0:4110 ] - [ INFO ]  Freeing task resources for Keyed Aggregation -> Sink: Unnamed (1/1)#0 (529eff84e8a3cd91bf9b428665788017).
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-4:4117 ] - [ INFO ]  Un-registering task and sending final execution state FAILED to JobManager for task Keyed Aggregation -> Sink: Unnamed (1/1)#0 529eff84e8a3cd91bf9b428665788017.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4128 ] - [ INFO ]  Keyed Aggregation -> Sink: Unnamed (1/1) (529eff84e8a3cd91bf9b428665788017) switched from INITIALIZING to FAILED on 3d38829a-4f65-4a3a-b5e0-51acf00b178c @ sync-v3.getpostman.com (dataPort=-1).
+java.io.IOException: unable to open JDBC writer
+	at org.apache.flink.connector.jdbc.internal.JdbcOutputFormat.open(JdbcOutputFormat.java:145)
+	at org.apache.flink.connector.jdbc.internal.GenericJdbcSinkFunction.open(GenericJdbcSinkFunction.java:52)
+	at org.apache.flink.api.common.functions.util.FunctionUtils.openFunction(FunctionUtils.java:34)
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.open(AbstractUdfStreamOperator.java:100)
+	at org.apache.flink.streaming.api.operators.StreamSink.open(StreamSink.java:46)
+	at org.apache.flink.streaming.runtime.tasks.RegularOperatorChain.initializeStateAndOpenOperators(RegularOperatorChain.java:110)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreGates(StreamTask.java:711)
+	at org.apache.flink.streaming.runtime.tasks.StreamTaskActionExecutor$1.call(StreamTaskActionExecutor.java:55)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreInternal(StreamTask.java:687)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restore(StreamTask.java:654)
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:958)
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:927)
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:766)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:575)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'abc'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at org.apache.flink.connector.jdbc.internal.connection.SimpleJdbcConnectionProvider.getOrEstablishConnection(SimpleJdbcConnectionProvider.java:112)
+	at org.apache.flink.connector.jdbc.internal.JdbcOutputFormat.open(JdbcOutputFormat.java:143)
+	... 14 more
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4139 ] - [ INFO ]  Calculating tasks to restart to recover the failed task a8961cb8b0e035e2429aa9765ce3c152_0.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4140 ] - [ INFO ]  4 tasks should be restarted to recover the failed task a8961cb8b0e035e2429aa9765ce3c152_0. 
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4144 ] - [ INFO ]  Job Flink Streaming Job (bfba8d24a544d5d6c8631bb668d84ab2) switched from state RUNNING to FAILING.
+org.apache.flink.runtime.JobException: Recovery is suppressed by NoRestartBackoffTimeStrategy
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.handleFailure(ExecutionFailureHandler.java:138)
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.getFailureHandlingResult(ExecutionFailureHandler.java:82)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.handleTaskFailure(DefaultScheduler.java:252)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.maybeHandleTaskFailure(DefaultScheduler.java:242)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.updateTaskExecutionStateInternal(DefaultScheduler.java:233)
+	at org.apache.flink.runtime.scheduler.SchedulerBase.updateTaskExecutionState(SchedulerBase.java:684)
+	at org.apache.flink.runtime.scheduler.SchedulerNG.updateTaskExecutionState(SchedulerNG.java:79)
+	at org.apache.flink.runtime.jobmaster.JobMaster.updateTaskExecutionState(JobMaster.java:444)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.lambda$handleRpcInvocation$1(AkkaRpcActor.java:316)
+	at org.apache.flink.runtime.concurrent.akka.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcInvocation(AkkaRpcActor.java:314)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcMessage(AkkaRpcActor.java:217)
+	at org.apache.flink.runtime.rpc.akka.FencedAkkaRpcActor.handleRpcMessage(FencedAkkaRpcActor.java:78)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleMessage(AkkaRpcActor.java:163)
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:24)
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:20)
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:123)
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:122)
+	at akka.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:20)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:171)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:172)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:172)
+	at akka.actor.Actor.aroundReceive(Actor.scala:537)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:535)
+	at akka.actor.AbstractActor.aroundReceive(AbstractActor.scala:220)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:580)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:548)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:270)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:231)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:243)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1067)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1703)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
+Caused by: java.io.IOException: unable to open JDBC writer
+	at org.apache.flink.connector.jdbc.internal.JdbcOutputFormat.open(JdbcOutputFormat.java:145)
+	at org.apache.flink.connector.jdbc.internal.GenericJdbcSinkFunction.open(GenericJdbcSinkFunction.java:52)
+	at org.apache.flink.api.common.functions.util.FunctionUtils.openFunction(FunctionUtils.java:34)
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.open(AbstractUdfStreamOperator.java:100)
+	at org.apache.flink.streaming.api.operators.StreamSink.open(StreamSink.java:46)
+	at org.apache.flink.streaming.runtime.tasks.RegularOperatorChain.initializeStateAndOpenOperators(RegularOperatorChain.java:110)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreGates(StreamTask.java:711)
+	at org.apache.flink.streaming.runtime.tasks.StreamTaskActionExecutor$1.call(StreamTaskActionExecutor.java:55)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreInternal(StreamTask.java:687)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restore(StreamTask.java:654)
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:958)
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:927)
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:766)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:575)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'abc'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at org.apache.flink.connector.jdbc.internal.connection.SimpleJdbcConnectionProvider.getOrEstablishConnection(SimpleJdbcConnectionProvider.java:112)
+	at org.apache.flink.connector.jdbc.internal.JdbcOutputFormat.open(JdbcOutputFormat.java:143)
+	... 14 more
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4150 ] - [ INFO ]  Source: Socket Stream -> Map -> Process (1/1) (f9a7f0832a2f7ac93b5d399fcf8aa5b9) switched from RUNNING to CANCELING.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-4:4152 ] - [ INFO ]  Attempting to cancel task Source: Socket Stream -> Map -> Process (1/1)#0 (f9a7f0832a2f7ac93b5d399fcf8aa5b9).
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-4:4152 ] - [ INFO ]  Source: Socket Stream -> Map -> Process (1/1)#0 (f9a7f0832a2f7ac93b5d399fcf8aa5b9) switched from RUNNING to CANCELING.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-4:4152 ] - [ INFO ]  Triggering cancellation of task code Source: Socket Stream -> Map -> Process (1/1)#0 (f9a7f0832a2f7ac93b5d399fcf8aa5b9).
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4154 ] - [ INFO ]  Source: Socket Stream -> Map (1/1) (69c86b27b4c165318a4e7ba21d60014d) switched from RUNNING to CANCELING.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4154 ] - [ INFO ]  Co-Process-Broadcast -> Sink Unnamed (1/1) (5788b56b4b3d524e093eac3912ba3e89) switched from RUNNING to CANCELING.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-4:4156 ] - [ INFO ]  Attempting to cancel task Source: Socket Stream -> Map (1/1)#0 (69c86b27b4c165318a4e7ba21d60014d).
+2025-09-22 08:53:41  [ Source: Socket Stream -> Map -> Process (1/1)#0:4156 ] - [ INFO ]  Source: Socket Stream -> Map -> Process (1/1)#0 (f9a7f0832a2f7ac93b5d399fcf8aa5b9) switched from CANCELING to CANCELED.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-4:4157 ] - [ INFO ]  Source: Socket Stream -> Map (1/1)#0 (69c86b27b4c165318a4e7ba21d60014d) switched from RUNNING to CANCELING.
+2025-09-22 08:53:41  [ Source: Socket Stream -> Map -> Process (1/1)#0:4157 ] - [ INFO ]  Freeing task resources for Source: Socket Stream -> Map -> Process (1/1)#0 (f9a7f0832a2f7ac93b5d399fcf8aa5b9).
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-4:4157 ] - [ INFO ]  Triggering cancellation of task code Source: Socket Stream -> Map (1/1)#0 (69c86b27b4c165318a4e7ba21d60014d).
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-4:4159 ] - [ INFO ]  Attempting to cancel task Co-Process-Broadcast -> Sink Unnamed (1/1)#0 (5788b56b4b3d524e093eac3912ba3e89).
+2025-09-22 08:53:41  [ Source: Socket Stream -> Map (1/1)#0:4159 ] - [ INFO ]  Source: Socket Stream -> Map (1/1)#0 (69c86b27b4c165318a4e7ba21d60014d) switched from CANCELING to CANCELED.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-4:4159 ] - [ INFO ]  Co-Process-Broadcast -> Sink Unnamed (1/1)#0 (5788b56b4b3d524e093eac3912ba3e89) switched from RUNNING to CANCELING.
+2025-09-22 08:53:41  [ Source: Socket Stream -> Map (1/1)#0:4160 ] - [ INFO ]  Freeing task resources for Source: Socket Stream -> Map (1/1)#0 (69c86b27b4c165318a4e7ba21d60014d).
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-4:4160 ] - [ INFO ]  Triggering cancellation of task code Co-Process-Broadcast -> Sink Unnamed (1/1)#0 (5788b56b4b3d524e093eac3912ba3e89).
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-4:4161 ] - [ INFO ]  Un-registering task and sending final execution state CANCELED to JobManager for task Source: Socket Stream -> Map -> Process (1/1)#0 f9a7f0832a2f7ac93b5d399fcf8aa5b9.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-4:4162 ] - [ INFO ]  Un-registering task and sending final execution state CANCELED to JobManager for task Source: Socket Stream -> Map (1/1)#0 69c86b27b4c165318a4e7ba21d60014d.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4163 ] - [ INFO ]  Source: Socket Stream -> Map -> Process (1/1) (f9a7f0832a2f7ac93b5d399fcf8aa5b9) switched from CANCELING to CANCELED.
+2025-09-22 08:53:41  [ Co-Process-Broadcast -> Sink Unnamed (1/1)#0:4164 ] - [ INFO ]  Co-Process-Broadcast -> Sink Unnamed (1/1)#0 (5788b56b4b3d524e093eac3912ba3e89) switched from CANCELING to CANCELED.
+2025-09-22 08:53:41  [ Co-Process-Broadcast -> Sink Unnamed (1/1)#0:4164 ] - [ INFO ]  Freeing task resources for Co-Process-Broadcast -> Sink Unnamed (1/1)#0 (5788b56b4b3d524e093eac3912ba3e89).
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-4:4165 ] - [ INFO ]  Un-registering task and sending final execution state CANCELED to JobManager for task Co-Process-Broadcast -> Sink Unnamed (1/1)#0 5788b56b4b3d524e093eac3912ba3e89.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4166 ] - [ INFO ]  Source: Socket Stream -> Map (1/1) (69c86b27b4c165318a4e7ba21d60014d) switched from CANCELING to CANCELED.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4171 ] - [ INFO ]  Co-Process-Broadcast -> Sink Unnamed (1/1) (5788b56b4b3d524e093eac3912ba3e89) switched from CANCELING to CANCELED.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4177 ] - [ INFO ]  Job Flink Streaming Job (bfba8d24a544d5d6c8631bb668d84ab2) switched from state FAILING to FAILED.
+org.apache.flink.runtime.JobException: Recovery is suppressed by NoRestartBackoffTimeStrategy
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.handleFailure(ExecutionFailureHandler.java:138)
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.getFailureHandlingResult(ExecutionFailureHandler.java:82)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.handleTaskFailure(DefaultScheduler.java:252)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.maybeHandleTaskFailure(DefaultScheduler.java:242)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.updateTaskExecutionStateInternal(DefaultScheduler.java:233)
+	at org.apache.flink.runtime.scheduler.SchedulerBase.updateTaskExecutionState(SchedulerBase.java:684)
+	at org.apache.flink.runtime.scheduler.SchedulerNG.updateTaskExecutionState(SchedulerNG.java:79)
+	at org.apache.flink.runtime.jobmaster.JobMaster.updateTaskExecutionState(JobMaster.java:444)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.lambda$handleRpcInvocation$1(AkkaRpcActor.java:316)
+	at org.apache.flink.runtime.concurrent.akka.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcInvocation(AkkaRpcActor.java:314)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcMessage(AkkaRpcActor.java:217)
+	at org.apache.flink.runtime.rpc.akka.FencedAkkaRpcActor.handleRpcMessage(FencedAkkaRpcActor.java:78)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleMessage(AkkaRpcActor.java:163)
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:24)
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:20)
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:123)
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:122)
+	at akka.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:20)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:171)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:172)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:172)
+	at akka.actor.Actor.aroundReceive(Actor.scala:537)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:535)
+	at akka.actor.AbstractActor.aroundReceive(AbstractActor.scala:220)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:580)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:548)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:270)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:231)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:243)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1067)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1703)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
+Caused by: java.io.IOException: unable to open JDBC writer
+	at org.apache.flink.connector.jdbc.internal.JdbcOutputFormat.open(JdbcOutputFormat.java:145)
+	at org.apache.flink.connector.jdbc.internal.GenericJdbcSinkFunction.open(GenericJdbcSinkFunction.java:52)
+	at org.apache.flink.api.common.functions.util.FunctionUtils.openFunction(FunctionUtils.java:34)
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.open(AbstractUdfStreamOperator.java:100)
+	at org.apache.flink.streaming.api.operators.StreamSink.open(StreamSink.java:46)
+	at org.apache.flink.streaming.runtime.tasks.RegularOperatorChain.initializeStateAndOpenOperators(RegularOperatorChain.java:110)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreGates(StreamTask.java:711)
+	at org.apache.flink.streaming.runtime.tasks.StreamTaskActionExecutor$1.call(StreamTaskActionExecutor.java:55)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreInternal(StreamTask.java:687)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restore(StreamTask.java:654)
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:958)
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:927)
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:766)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:575)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'abc'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at org.apache.flink.connector.jdbc.internal.connection.SimpleJdbcConnectionProvider.getOrEstablishConnection(SimpleJdbcConnectionProvider.java:112)
+	at org.apache.flink.connector.jdbc.internal.JdbcOutputFormat.open(JdbcOutputFormat.java:143)
+	... 14 more
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-4:4177 ] - [ INFO ]  Clearing resource requirements of job bfba8d24a544d5d6c8631bb668d84ab2
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4183 ] - [ INFO ]  Stopping checkpoint coordinator for job bfba8d24a544d5d6c8631bb668d84ab2.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-6:4195 ] - [ INFO ]  Shutting down Flink Mini Cluster
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-4:4195 ] - [ INFO ]  Job bfba8d24a544d5d6c8631bb668d84ab2 reached terminal state FAILED.
+org.apache.flink.runtime.JobException: Recovery is suppressed by NoRestartBackoffTimeStrategy
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.handleFailure(ExecutionFailureHandler.java:138)
+	at org.apache.flink.runtime.executiongraph.failover.flip1.ExecutionFailureHandler.getFailureHandlingResult(ExecutionFailureHandler.java:82)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.handleTaskFailure(DefaultScheduler.java:252)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.maybeHandleTaskFailure(DefaultScheduler.java:242)
+	at org.apache.flink.runtime.scheduler.DefaultScheduler.updateTaskExecutionStateInternal(DefaultScheduler.java:233)
+	at org.apache.flink.runtime.scheduler.SchedulerBase.updateTaskExecutionState(SchedulerBase.java:684)
+	at org.apache.flink.runtime.scheduler.SchedulerNG.updateTaskExecutionState(SchedulerNG.java:79)
+	at org.apache.flink.runtime.jobmaster.JobMaster.updateTaskExecutionState(JobMaster.java:444)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.lambda$handleRpcInvocation$1(AkkaRpcActor.java:316)
+	at org.apache.flink.runtime.concurrent.akka.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcInvocation(AkkaRpcActor.java:314)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcMessage(AkkaRpcActor.java:217)
+	at org.apache.flink.runtime.rpc.akka.FencedAkkaRpcActor.handleRpcMessage(FencedAkkaRpcActor.java:78)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleMessage(AkkaRpcActor.java:163)
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:24)
+	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:20)
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:123)
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:122)
+	at akka.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:20)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:171)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:172)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:172)
+	at akka.actor.Actor.aroundReceive(Actor.scala:537)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:535)
+	at akka.actor.AbstractActor.aroundReceive(AbstractActor.scala:220)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:580)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:548)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:270)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:231)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:243)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1067)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1703)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
+Caused by: java.io.IOException: unable to open JDBC writer
+	at org.apache.flink.connector.jdbc.internal.JdbcOutputFormat.open(JdbcOutputFormat.java:145)
+	at org.apache.flink.connector.jdbc.internal.GenericJdbcSinkFunction.open(GenericJdbcSinkFunction.java:52)
+	at org.apache.flink.api.common.functions.util.FunctionUtils.openFunction(FunctionUtils.java:34)
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.open(AbstractUdfStreamOperator.java:100)
+	at org.apache.flink.streaming.api.operators.StreamSink.open(StreamSink.java:46)
+	at org.apache.flink.streaming.runtime.tasks.RegularOperatorChain.initializeStateAndOpenOperators(RegularOperatorChain.java:110)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreGates(StreamTask.java:711)
+	at org.apache.flink.streaming.runtime.tasks.StreamTaskActionExecutor$1.call(StreamTaskActionExecutor.java:55)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restoreInternal(StreamTask.java:687)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.restore(StreamTask.java:654)
+	at org.apache.flink.runtime.taskmanager.Task.runWithSystemExitMonitoring(Task.java:958)
+	at org.apache.flink.runtime.taskmanager.Task.restoreAndInvoke(Task.java:927)
+	at org.apache.flink.runtime.taskmanager.Task.doRun(Task.java:766)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:575)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'abc'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at org.apache.flink.connector.jdbc.internal.connection.SimpleJdbcConnectionProvider.getOrEstablishConnection(SimpleJdbcConnectionProvider.java:112)
+	at org.apache.flink.connector.jdbc.internal.JdbcOutputFormat.open(JdbcOutputFormat.java:143)
+	... 14 more
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-6:4196 ] - [ INFO ]  Shutting down rest endpoint.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4196 ] - [ INFO ]  Stopping TaskExecutor akka://flink/user/rpc/taskmanager_0.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4197 ] - [ INFO ]  Close ResourceManager connection 4200640d58251aa369eb0c3bf3e8a091.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-7:4198 ] - [ INFO ]  Closing TaskExecutor connection 3d38829a-4f65-4a3a-b5e0-51acf00b178c because: The TaskExecutor is shutting down.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4201 ] - [ INFO ]  Close JobManager connection for job bfba8d24a544d5d6c8631bb668d84ab2.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-4:4207 ] - [ INFO ]  Stopping the JobMaster for job 'Flink Streaming Job' (bfba8d24a544d5d6c8631bb668d84ab2).
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4208 ] - [ INFO ]  Shutting down TaskExecutorStateChangelogStoragesManager.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4210 ] - [ INFO ]  Free slot TaskSlot(index:0, state:ALLOCATED, resource profile: ResourceProfile{taskHeapMemory=1024.000gb (1099511627776 bytes), taskOffHeapMemory=1024.000gb (1099511627776 bytes), managedMemory=128.000mb (134217728 bytes), networkMemory=64.000mb (67108864 bytes)}, allocationId: ecc9a912c59bc990d39b7b8def87e1ca, jobId: bfba8d24a544d5d6c8631bb668d84ab2).
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-4:4213 ] - [ INFO ]  Releasing slot [ecc9a912c59bc990d39b7b8def87e1ca].
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4215 ] - [ INFO ]  Stop job leader service.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-4:4215 ] - [ INFO ]  Shutting down
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-4:4217 ] - [ INFO ]  Close ResourceManager connection 4200640d58251aa369eb0c3bf3e8a091: Stopping JobMaster for job 'Flink Streaming Job' (bfba8d24a544d5d6c8631bb668d84ab2).
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4218 ] - [ INFO ]  Shutting down TaskExecutorLocalStateStoresManager.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-7:4219 ] - [ INFO ]  Disconnect job manager b1d8aa2e0fd76b86c53b3b66d86a4403@akka://flink/user/rpc/jobmanager_3 for job bfba8d24a544d5d6c8631bb668d84ab2 from the resource manager.
+2025-09-22 08:53:41  [ ForkJoinPool.commonPool-worker-11:4243 ] - [ INFO ]  Removing cache directory C:\Users\JWT\AppData\Local\Temp\flink-web-ui
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4246 ] - [ INFO ]  FileChannelManager removed spill file directory C:\Users\JWT\AppData\Local\Temp\flink-io-462f8978-4f59-4c41-b973-b37cb64142c8
+2025-09-22 08:53:41  [ ForkJoinPool.commonPool-worker-11:4246 ] - [ INFO ]  Shut down complete.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4247 ] - [ INFO ]  Shutting down the network environment and its components.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4252 ] - [ INFO ]  FileChannelManager removed spill file directory C:\Users\JWT\AppData\Local\Temp\flink-netty-shuffle-370e8657-22ec-41d1-ab07-97a71cc467f4
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4252 ] - [ INFO ]  Shutting down the kvState service and its components.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4253 ] - [ INFO ]  Stop job leader service.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-6:4254 ] - [ INFO ]  Shut down cluster because application is in CANCELED, diagnostics DispatcherResourceManagerComponent has been closed..
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-6:4255 ] - [ INFO ]  Closing components.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4255 ] - [ INFO ]  removed file cache directory C:\Users\JWT\AppData\Local\Temp\flink-dist-cache-f153c845-9444-4543-94e9-a2d060579828
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-6:4256 ] - [ INFO ]  Stopping SessionDispatcherLeaderProcess.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4257 ] - [ INFO ]  Stopped TaskExecutor akka://flink/user/rpc/taskmanager_0.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-6:4257 ] - [ INFO ]  Stopping resource manager service.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-6:4259 ] - [ INFO ]  Closing the slot manager.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-6:4259 ] - [ INFO ]  Suspending the slot manager.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4260 ] - [ INFO ]  Stopping dispatcher akka://flink/user/rpc/dispatcher_1.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4260 ] - [ INFO ]  Stopping all currently running jobs of dispatcher akka://flink/user/rpc/dispatcher_1.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4277 ] - [ INFO ]  Stopped dispatcher akka://flink/user/rpc/dispatcher_1.
+2025-09-22 08:53:41  [ mini-cluster-io-thread-3:4295 ] - [ INFO ]  Stopping Akka RPC service.
+2025-09-22 08:53:41  [ flink-metrics-5:4363 ] - [ INFO ]  Stopping Akka RPC service.
+2025-09-22 08:53:41  [ flink-metrics-5:4364 ] - [ INFO ]  Stopped Akka RPC service.
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4374 ] - [ INFO ]  Shutting down BLOB cache
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4376 ] - [ INFO ]  Shutting down BLOB cache
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4378 ] - [ INFO ]  Stopped BLOB server at 0.0.0.0:9458
+2025-09-22 08:53:41  [ flink-akka.actor.default-dispatcher-8:4384 ] - [ INFO ]  Stopped Akka RPC service.
+2025-09-22 09:32:04  [ main:0 ] - [ INFO ]  Config uses fallback configuration key 'rest.port' instead of key 'rest.bind-port'
+2025-09-22 09:32:04  [ main:5 ] - [ INFO ]  The configuration option taskmanager.cpu.cores required for local execution is not set, setting it to the maximal possible value.
+2025-09-22 09:32:04  [ main:5 ] - [ INFO ]  The configuration option taskmanager.memory.task.heap.size required for local execution is not set, setting it to the maximal possible value.
+2025-09-22 09:32:04  [ main:6 ] - [ INFO ]  The configuration option taskmanager.memory.task.off-heap.size required for local execution is not set, setting it to the maximal possible value.
+2025-09-22 09:32:04  [ main:6 ] - [ INFO ]  The configuration option taskmanager.memory.network.min required for local execution is not set, setting it to its default value 64 mb.
+2025-09-22 09:32:04  [ main:6 ] - [ INFO ]  The configuration option taskmanager.memory.network.max required for local execution is not set, setting it to its default value 64 mb.
+2025-09-22 09:32:04  [ main:6 ] - [ INFO ]  The configuration option taskmanager.memory.managed.size required for local execution is not set, setting it to its default value 128 mb.
+2025-09-22 09:32:04  [ main:10 ] - [ INFO ]  Starting Flink Mini Cluster
+2025-09-22 09:32:05  [ main:631 ] - [ INFO ]  Starting Metrics Registry
+2025-09-22 09:32:05  [ main:664 ] - [ INFO ]  No metrics reporter configured, no metrics will be exposed/reported.
+2025-09-22 09:32:05  [ main:664 ] - [ INFO ]  Starting RPC Service(s)
+2025-09-22 09:32:05  [ main:675 ] - [ INFO ]  Trying to start local actor system
+2025-09-22 09:32:05  [ flink-akka.actor.default-dispatcher-5:1151 ] - [ INFO ]  Slf4jLogger started
+2025-09-22 09:32:05  [ main:1226 ] - [ INFO ]  Actor system started at akka://flink
+2025-09-22 09:32:05  [ main:1236 ] - [ INFO ]  Trying to start local actor system
+2025-09-22 09:32:05  [ flink-metrics-5:1244 ] - [ INFO ]  Slf4jLogger started
+2025-09-22 09:32:05  [ main:1252 ] - [ INFO ]  Actor system started at akka://flink-metrics
+2025-09-22 09:32:05  [ main:1260 ] - [ INFO ]  Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at akka://flink-metrics/user/rpc/MetricQueryService .
+2025-09-22 09:32:05  [ main:1308 ] - [ INFO ]  Starting high-availability services
+2025-09-22 09:32:06  [ main:1316 ] - [ INFO ]  Created BLOB server storage directory C:\Users\JWT\AppData\Local\Temp\blobStore-dcb0645e-ce16-45cf-91bf-3e8b1dc4ebd2
+2025-09-22 09:32:06  [ main:1319 ] - [ INFO ]  Started BLOB server at 0.0.0.0:39587 - max concurrent requests: 50 - max backlog: 1000
+2025-09-22 09:32:06  [ main:1328 ] - [ INFO ]  Created BLOB cache storage directory C:\Users\JWT\AppData\Local\Temp\blobStore-160ff88c-bba3-463c-b279-1b2c1074116b
+2025-09-22 09:32:06  [ main:1329 ] - [ INFO ]  Created BLOB cache storage directory C:\Users\JWT\AppData\Local\Temp\blobStore-9a68f951-7b91-424b-bcce-542893f453dc
+2025-09-22 09:32:06  [ main:1329 ] - [ INFO ]  Starting 1 TaskManager(s)
+2025-09-22 09:32:06  [ main:1332 ] - [ INFO ]  Starting TaskManager with ResourceID: 8c635730-5467-4668-97c2-e0445b9907f5
+2025-09-22 09:32:06  [ main:1341 ] - [ INFO ]  Temporary file directory 'C:\Users\JWT\AppData\Local\Temp': total 400 GB, usable 263 GB (65.75% usable)
+2025-09-22 09:32:06  [ main:1345 ] - [ INFO ]  Created a new FileChannelManager for spilling of task related data to disk (joins, sorting, ...). Used directories:
+	C:\Users\JWT\AppData\Local\Temp\flink-io-f2a64bb6-9886-4d2f-b1bf-d5478e2c2314
+2025-09-22 09:32:06  [ main:1351 ] - [ INFO ]  Created a new FileChannelManager for storing result partitions of BLOCKING shuffles. Used directories:
+	C:\Users\JWT\AppData\Local\Temp\flink-netty-shuffle-cd303c05-e813-4f74-8877-6dc2a4b11fb6
+2025-09-22 09:32:06  [ main:1390 ] - [ INFO ]  Allocated 64 MB for network buffer pool (number of memory segments: 2048, bytes per segment: 32768).
+2025-09-22 09:32:06  [ main:1401 ] - [ INFO ]  Starting the network environment and its components.
+2025-09-22 09:32:06  [ main:1402 ] - [ INFO ]  Starting the kvState service and its components.
+2025-09-22 09:32:06  [ main:1415 ] - [ INFO ]  Config uses fallback configuration key 'akka.ask.timeout' instead of key 'taskmanager.slot.timeout'
+2025-09-22 09:32:06  [ main:1425 ] - [ INFO ]  Starting RPC endpoint for org.apache.flink.runtime.taskexecutor.TaskExecutor at akka://flink/user/rpc/taskmanager_0 .
+2025-09-22 09:32:06  [ flink-akka.actor.default-dispatcher-5:1437 ] - [ INFO ]  Start job leader service.
+2025-09-22 09:32:06  [ flink-akka.actor.default-dispatcher-5:1439 ] - [ INFO ]  User file cache uses directory C:\Users\JWT\AppData\Local\Temp\flink-dist-cache-534daad4-9f01-458c-9d3e-5fe1156bbe8e
+2025-09-22 09:32:06  [ main:1459 ] - [ INFO ]  Config uses fallback configuration key 'rest.port' instead of key 'rest.bind-port'
+2025-09-22 09:32:06  [ main:1474 ] - [ INFO ]  Starting rest endpoint.
+2025-09-22 09:32:06  [ main:1655 ] - [ WARN ]  Log file environment variable 'log.file' is not set.
+2025-09-22 09:32:06  [ main:1656 ] - [ WARN ]  JobManager log files are unavailable in the web dashboard. Log file location not found in environment variable 'log.file' or configuration key 'web.log.path'.
+2025-09-22 09:32:07  [ main:2398 ] - [ INFO ]  Rest endpoint listening at localhost:8822
+2025-09-22 09:32:07  [ main:2398 ] - [ INFO ]  Proposing leadership to contender http://localhost:8822
+2025-09-22 09:32:07  [ main:2402 ] - [ INFO ]  Web frontend listening at http://localhost:8822.
+2025-09-22 09:32:07  [ mini-cluster-io-thread-1:2402 ] - [ INFO ]  http://localhost:8822 was granted leadership with leaderSessionID=f201d8b3-5c26-4e93-ac47-d4e289d9fb09
+2025-09-22 09:32:07  [ mini-cluster-io-thread-1:2402 ] - [ INFO ]  Received confirmation of leadership for leader http://localhost:8822 , session=f201d8b3-5c26-4e93-ac47-d4e289d9fb09
+2025-09-22 09:32:07  [ main:2413 ] - [ INFO ]  Proposing leadership to contender LeaderContender: DefaultDispatcherRunner
+2025-09-22 09:32:07  [ main:2414 ] - [ INFO ]  Starting resource manager service.
+2025-09-22 09:32:07  [ main:2414 ] - [ INFO ]  Proposing leadership to contender LeaderContender: ResourceManagerServiceImpl
+2025-09-22 09:32:07  [ mini-cluster-io-thread-2:2414 ] - [ INFO ]  DefaultDispatcherRunner was granted leadership with leader id 2c5bb9dc-9a9a-4f7e-b636-d8b9e5f27ee2. Creating new DispatcherLeaderProcess.
+2025-09-22 09:32:07  [ pool-2-thread-1:2415 ] - [ INFO ]  Resource manager service is granted leadership with session id adf3af9d-e983-49a3-b110-312de1e6492e.
+2025-09-22 09:32:07  [ main:2418 ] - [ INFO ]  Flink Mini Cluster started successfully
+2025-09-22 09:32:07  [ mini-cluster-io-thread-2:2419 ] - [ INFO ]  Start SessionDispatcherLeaderProcess.
+2025-09-22 09:32:07  [ mini-cluster-io-thread-1:2421 ] - [ INFO ]  Recover all persisted job graphs.
+2025-09-22 09:32:07  [ mini-cluster-io-thread-1:2421 ] - [ INFO ]  Successfully recovered 0 persisted job graphs.
+2025-09-22 09:32:07  [ mini-cluster-io-thread-1:2429 ] - [ INFO ]  Starting RPC endpoint for org.apache.flink.runtime.dispatcher.StandaloneDispatcher at akka://flink/user/rpc/dispatcher_1 .
+2025-09-22 09:32:07  [ mini-cluster-io-thread-1:2449 ] - [ INFO ]  Received confirmation of leadership for leader akka://flink/user/rpc/dispatcher_1 , session=2c5bb9dc-9a9a-4f7e-b636-d8b9e5f27ee2
+2025-09-22 09:32:07  [ pool-2-thread-1:2454 ] - [ INFO ]  Starting RPC endpoint for org.apache.flink.runtime.resourcemanager.StandaloneResourceManager at akka://flink/user/rpc/resourcemanager_2 .
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-7:2466 ] - [ INFO ]  Starting the resource manager.
+2025-09-22 09:32:07  [ mini-cluster-io-thread-2:2475 ] - [ INFO ]  Received confirmation of leadership for leader akka://flink/user/rpc/resourcemanager_2 , session=adf3af9d-e983-49a3-b110-312de1e6492e
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-7:2477 ] - [ INFO ]  Connecting to ResourceManager akka://flink/user/rpc/resourcemanager_2(b110312de1e6492eadf3af9de98349a3).
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-8:2485 ] - [ INFO ]  Resolved ResourceManager address, beginning registration
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-9:2490 ] - [ INFO ]  Registering TaskManager with ResourceID 8c635730-5467-4668-97c2-e0445b9907f5 (akka://flink/user/rpc/taskmanager_0) at ResourceManager
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-9:2492 ] - [ INFO ]  Successful registration at resource manager akka://flink/user/rpc/resourcemanager_2 under registration id 4ad845fc814014a3d04b9d0a4260acae.
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-5:2493 ] - [ INFO ]  Received JobGraph submission 'Flink Streaming Job' (fc2b31922078ca332e127312799a22e6).
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-5:2494 ] - [ INFO ]  Submitting job 'Flink Streaming Job' (fc2b31922078ca332e127312799a22e6).
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-5:2505 ] - [ INFO ]  Proposing leadership to contender LeaderContender: JobMasterServiceLeadershipRunner
+2025-09-22 09:32:07  [ jobmanager-io-thread-1:2515 ] - [ INFO ]  Starting RPC endpoint for org.apache.flink.runtime.jobmaster.JobMaster at akka://flink/user/rpc/jobmanager_3 .
+2025-09-22 09:32:07  [ jobmanager-io-thread-1:2521 ] - [ INFO ]  Initializing job 'Flink Streaming Job' (fc2b31922078ca332e127312799a22e6).
+2025-09-22 09:32:07  [ jobmanager-io-thread-1:2541 ] - [ INFO ]  Using restart back off time strategy FixedDelayRestartBackoffTimeStrategy(maxNumberRestartAttempts=2147483647, backoffTimeMS=1000) for Flink Streaming Job (fc2b31922078ca332e127312799a22e6).
+2025-09-22 09:32:07  [ jobmanager-io-thread-1:2591 ] - [ INFO ]  Running initialization on master for job Flink Streaming Job (fc2b31922078ca332e127312799a22e6).
+2025-09-22 09:32:07  [ jobmanager-io-thread-1:2591 ] - [ INFO ]  Successfully ran initialization on master in 0 ms.
+2025-09-22 09:32:07  [ jobmanager-io-thread-1:2606 ] - [ INFO ]  Built 1 pipelined regions in 2 ms
+2025-09-22 09:32:07  [ jobmanager-io-thread-1:2635 ] - [ INFO ]  No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@44c20bd4
+2025-09-22 09:32:07  [ jobmanager-io-thread-1:2635 ] - [ INFO ]  State backend loader loads the state backend as HashMapStateBackend
+2025-09-22 09:32:07  [ jobmanager-io-thread-1:2638 ] - [ INFO ]  Using job/cluster config to configure application-defined checkpoint storage: org.apache.flink.runtime.state.storage.FileSystemCheckpointStorage@4722ec7d
+2025-09-22 09:32:07  [ jobmanager-io-thread-1:2695 ] - [ INFO ]  No checkpoint found during restore.
+2025-09-22 09:32:07  [ jobmanager-io-thread-1:2701 ] - [ INFO ]  Using failover strategy org.apache.flink.runtime.executiongraph.failover.flip1.RestartPipelinedRegionFailoverStrategy@2afc90c for Flink Streaming Job (fc2b31922078ca332e127312799a22e6).
+2025-09-22 09:32:07  [ jobmanager-io-thread-1:2713 ] - [ INFO ]  Received confirmation of leadership for leader akka://flink/user/rpc/jobmanager_3 , session=eace80c1-1e1c-4484-9222-1579e0ceeb17
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-7:2717 ] - [ INFO ]  Starting execution of job 'Flink Streaming Job' (fc2b31922078ca332e127312799a22e6) under job master id 92221579e0ceeb17eace80c11e1c4484.
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-7:2718 ] - [ INFO ]  Starting scheduling with scheduling strategy [org.apache.flink.runtime.scheduler.strategy.PipelinedRegionSchedulingStrategy]
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-7:2718 ] - [ INFO ]  Job Flink Streaming Job (fc2b31922078ca332e127312799a22e6) switched from state CREATED to RUNNING.
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-7:2726 ] - [ INFO ]  Source: Custom Source -> Process -> (Sink: Print to Std. Out, Sink: Print to Std. Out) (1/1) (7faeacf8e9202ae9b5f73d108f56bc5a) switched from CREATED to SCHEDULED.
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-7:2739 ] - [ INFO ]  Connecting to ResourceManager akka://flink/user/rpc/resourcemanager_2(b110312de1e6492eadf3af9de98349a3)
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-5:2741 ] - [ INFO ]  Resolved ResourceManager address, beginning registration
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-7:2743 ] - [ INFO ]  Registering job manager 92221579e0ceeb17eace80c11e1c4484@akka://flink/user/rpc/jobmanager_3 for job fc2b31922078ca332e127312799a22e6.
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-5:2748 ] - [ INFO ]  Registered job manager 92221579e0ceeb17eace80c11e1c4484@akka://flink/user/rpc/jobmanager_3 for job fc2b31922078ca332e127312799a22e6.
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-5:2750 ] - [ INFO ]  JobManager successfully registered at ResourceManager, leader id: b110312de1e6492eadf3af9de98349a3.
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-7:2751 ] - [ INFO ]  Received resource requirements from job fc2b31922078ca332e127312799a22e6: [ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}]
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-5:2755 ] - [ INFO ]  Receive slot request 07f2de18cd2572627959a527556bb375 for job fc2b31922078ca332e127312799a22e6 from resource manager with leader id b110312de1e6492eadf3af9de98349a3.
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-5:2760 ] - [ INFO ]  Allocated slot for 07f2de18cd2572627959a527556bb375.
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-5:2761 ] - [ INFO ]  Add job fc2b31922078ca332e127312799a22e6 for job leader monitoring.
+2025-09-22 09:32:07  [ mini-cluster-io-thread-2:2763 ] - [ INFO ]  Try to register at job manager akka://flink/user/rpc/jobmanager_3 with leader id eace80c1-1e1c-4484-9222-1579e0ceeb17.
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-5:2764 ] - [ INFO ]  Resolved JobManager address, beginning registration
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-9:2768 ] - [ INFO ]  Successful registration at job manager akka://flink/user/rpc/jobmanager_3 for job fc2b31922078ca332e127312799a22e6.
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-9:2769 ] - [ INFO ]  Establish JobManager connection for job fc2b31922078ca332e127312799a22e6.
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-9:2771 ] - [ INFO ]  Offer reserved slots to the leader of job fc2b31922078ca332e127312799a22e6.
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-8:2777 ] - [ INFO ]  Source: Custom Source -> Process -> (Sink: Print to Std. Out, Sink: Print to Std. Out) (1/1) (7faeacf8e9202ae9b5f73d108f56bc5a) switched from SCHEDULED to DEPLOYING.
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-8:2780 ] - [ INFO ]  Deploying Source: Custom Source -> Process -> (Sink: Print to Std. Out, Sink: Print to Std. Out) (1/1) (attempt #0) with attempt id 7faeacf8e9202ae9b5f73d108f56bc5a to 8c635730-5467-4668-97c2-e0445b9907f5 @ sync-v3.getpostman.com (dataPort=-1) with allocation id 07f2de18cd2572627959a527556bb375
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-9:2785 ] - [ INFO ]  Activate slot 07f2de18cd2572627959a527556bb375.
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-9:2795 ] - [ INFO ]  StateChangelogStorageLoader initialized with shortcut names {memory}.
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-9:2795 ] - [ INFO ]  Creating a changelog storage with name 'memory'.
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-9:2807 ] - [ INFO ]  Received task Source: Custom Source -> Process -> (Sink: Print to Std. Out, Sink: Print to Std. Out) (1/1)#0 (7faeacf8e9202ae9b5f73d108f56bc5a), deploy into slot with allocation id 07f2de18cd2572627959a527556bb375.
+2025-09-22 09:32:07  [ Source: Custom Source -> Process -> (Sink: Print to Std. Out, Sink: Print to Std. Out) (1/1)#0:2807 ] - [ INFO ]  Source: Custom Source -> Process -> (Sink: Print to Std. Out, Sink: Print to Std. Out) (1/1)#0 (7faeacf8e9202ae9b5f73d108f56bc5a) switched from CREATED to DEPLOYING.
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-9:2809 ] - [ INFO ]  Activate slot 07f2de18cd2572627959a527556bb375.
+2025-09-22 09:32:07  [ Source: Custom Source -> Process -> (Sink: Print to Std. Out, Sink: Print to Std. Out) (1/1)#0:2811 ] - [ INFO ]  Loading JAR files for task Source: Custom Source -> Process -> (Sink: Print to Std. Out, Sink: Print to Std. Out) (1/1)#0 (7faeacf8e9202ae9b5f73d108f56bc5a) [DEPLOYING].
+2025-09-22 09:32:07  [ Source: Custom Source -> Process -> (Sink: Print to Std. Out, Sink: Print to Std. Out) (1/1)#0:2826 ] - [ INFO ]  No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@21a06e46
+2025-09-22 09:32:07  [ Source: Custom Source -> Process -> (Sink: Print to Std. Out, Sink: Print to Std. Out) (1/1)#0:2826 ] - [ INFO ]  State backend loader loads the state backend as HashMapStateBackend
+2025-09-22 09:32:07  [ Source: Custom Source -> Process -> (Sink: Print to Std. Out, Sink: Print to Std. Out) (1/1)#0:2826 ] - [ INFO ]  Using job/cluster config to configure application-defined checkpoint storage: org.apache.flink.runtime.state.storage.FileSystemCheckpointStorage@e813f23
+2025-09-22 09:32:07  [ Source: Custom Source -> Process -> (Sink: Print to Std. Out, Sink: Print to Std. Out) (1/1)#0:2836 ] - [ INFO ]  Source: Custom Source -> Process -> (Sink: Print to Std. Out, Sink: Print to Std. Out) (1/1)#0 (7faeacf8e9202ae9b5f73d108f56bc5a) switched from DEPLOYING to INITIALIZING.
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-9:2837 ] - [ INFO ]  Source: Custom Source -> Process -> (Sink: Print to Std. Out, Sink: Print to Std. Out) (1/1) (7faeacf8e9202ae9b5f73d108f56bc5a) switched from DEPLOYING to INITIALIZING.
+2025-09-22 09:32:07  [ Source: Custom Source -> Process -> (Sink: Print to Std. Out, Sink: Print to Std. Out) (1/1)#0:2884 ] - [ INFO ]  Source: Custom Source -> Process -> (Sink: Print to Std. Out, Sink: Print to Std. Out) (1/1)#0 (7faeacf8e9202ae9b5f73d108f56bc5a) switched from INITIALIZING to RUNNING.
+2025-09-22 09:32:07  [ flink-akka.actor.default-dispatcher-8:2887 ] - [ INFO ]  Source: Custom Source -> Process -> (Sink: Print to Std. Out, Sink: Print to Std. Out) (1/1) (7faeacf8e9202ae9b5f73d108f56bc5a) switched from INITIALIZING to RUNNING.
+2025-09-22 09:32:08  [ Checkpoint Timer:3392 ] - [ INFO ]  Triggering checkpoint 1 (type=CHECKPOINT) @ 1758504728067 for job fc2b31922078ca332e127312799a22e6.
+2025-09-22 09:32:08  [ jobmanager-io-thread-3:3557 ] - [ INFO ]  Completed checkpoint 1 for job fc2b31922078ca332e127312799a22e6 (0 bytes, checkpointDuration=174 ms, finalizationTime=3 ms).
+2025-09-22 09:32:13  [ Checkpoint Timer:8374 ] - [ INFO ]  Triggering checkpoint 2 (type=CHECKPOINT) @ 1758504733060 for job fc2b31922078ca332e127312799a22e6.
+2025-09-22 09:32:13  [ jobmanager-io-thread-6:8381 ] - [ INFO ]  Completed checkpoint 2 for job fc2b31922078ca332e127312799a22e6 (0 bytes, checkpointDuration=5 ms, finalizationTime=3 ms).
+2025-09-22 09:32:18  [ Checkpoint Timer:13374 ] - [ INFO ]  Triggering checkpoint 3 (type=CHECKPOINT) @ 1758504738060 for job fc2b31922078ca332e127312799a22e6.
+2025-09-22 09:32:18  [ jobmanager-io-thread-9:13379 ] - [ INFO ]  Completed checkpoint 3 for job fc2b31922078ca332e127312799a22e6 (0 bytes, checkpointDuration=5 ms, finalizationTime=1 ms).
+2025-09-22 09:32:20  [ PermanentBlobCache shutdown hook:16254 ] - [ INFO ]  Shutting down BLOB cache
+2025-09-22 09:32:20  [ TransientBlobCache shutdown hook:16254 ] - [ INFO ]  Shutting down BLOB cache
+2025-09-22 09:32:20  [ TaskExecutorLocalStateStoresManager shutdown hook:16255 ] - [ INFO ]  Shutting down TaskExecutorLocalStateStoresManager.
+2025-09-22 09:32:20  [ TaskExecutorStateChangelogStoragesManager shutdown hook:16255 ] - [ INFO ]  Shutting down TaskExecutorStateChangelogStoragesManager.
+2025-09-22 09:32:20  [ FileCache shutdown hook:16259 ] - [ INFO ]  removed file cache directory C:\Users\JWT\AppData\Local\Temp\flink-dist-cache-534daad4-9f01-458c-9d3e-5fe1156bbe8e
+2025-09-22 09:32:20  [ BlobServer shutdown hook:16262 ] - [ INFO ]  Stopped BLOB server at 0.0.0.0:39587
+2025-09-22 09:32:20  [ FileChannelManagerImpl-netty-shuffle shutdown hook:16262 ] - [ INFO ]  FileChannelManager removed spill file directory C:\Users\JWT\AppData\Local\Temp\flink-netty-shuffle-cd303c05-e813-4f74-8877-6dc2a4b11fb6
+2025-09-22 09:32:20  [ FileChannelManagerImpl-io shutdown hook:16264 ] - [ INFO ]  FileChannelManager removed spill file directory C:\Users\JWT\AppData\Local\Temp\flink-io-f2a64bb6-9886-4d2f-b1bf-d5478e2c2314
